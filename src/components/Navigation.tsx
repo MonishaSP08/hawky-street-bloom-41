@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, MapPin, Phone, User } from 'lucide-react';
+import { Menu, X, Phone, User } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,13 +24,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-hawky p-2 rounded-full">
-              <MapPin className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-hawky bg-clip-text text-transparent">
-              Hawky
-            </span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/fc706038-1e1f-4243-a8e0-5fa230c47d80.png" 
+              alt="Hawky Logo" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

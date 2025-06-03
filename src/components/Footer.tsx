@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Phone, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Mail, Phone, Instagram, Facebook, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,11 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-gradient-hawky p-2 rounded-full">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold">Hawky</span>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/fc706038-1e1f-4243-a8e0-5fa230c47d80.png" 
+                alt="Hawky Logo" 
+                className="h-8 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-gray-400 text-sm">
               From Street Carts To Your Cart — Instantly. Empowering local vendors with AI-powered hyperlocal delivery.
@@ -60,7 +61,7 @@ const Footer = () => {
                 <span className="text-gray-400 text-sm">+91 98765 43210</span>
               </div>
               <div className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 text-hawky-orange mt-1" />
+                <div className="w-4 h-4 text-hawky-orange mt-1">📍</div>
                 <span className="text-gray-400 text-sm">
                   Bangalore, Hyderabad, Pune<br />
                   Coming to more cities soon!

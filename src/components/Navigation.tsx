@@ -28,7 +28,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/fc706038-1e1f-4243-a8e0-5fa230c47d80.png" 
               alt="Hawky Logo" 
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
           </Link>
 

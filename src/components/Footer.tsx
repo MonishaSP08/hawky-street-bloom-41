@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/fc706038-1e1f-4243-a8e0-5fa230c47d80.png" 
                 alt="Hawky Logo" 
-                className="h-8 w-auto brightness-0 invert"
+                className="h-12 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-gray-400 text-sm">

@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
@@ -108,13 +107,8 @@ const HowItWorks = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section with How Hawky Works image */}
-      <section 
-        className="pt-20 pb-16 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/lovable-uploads/c3f92fdd-4e9d-4dfb-89b5-5b9f01d16994.png)'
-        }}
-      >
+      {/* Hero Section with gradient background */}
+      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">

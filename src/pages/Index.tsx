@@ -62,13 +62,8 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section with main landing image */}
-      <section 
-        className="relative pt-20 pb-16 bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/lovable-uploads/3a91c099-2e5a-462a-8cec-ee3b3076c50b.png)'
-        }}
-      >
+      {/* Hero Section with gradient background */}
+      <section className="relative pt-20 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -127,12 +122,7 @@ const Index = () => {
       </section>
 
       {/* City Launch Model Section */}
-      <section 
-        className="py-16 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/lovable-uploads/3f6db57b-9021-4136-8ee6-d85cddb25d09.png)'
-        }}
-      >
+      <section className="py-16 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -148,13 +138,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Categories with custom image */}
-      <section 
-        className="py-16 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(/lovable-uploads/147afb0a-4dcb-46c5-8cd4-5c32ad6b6711.png)'
-        }}
-      >
+      {/* Categories */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -180,7 +165,7 @@ const Index = () => {
       </section>
 
       {/* Featured Vendors */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-12">
             <div>
@@ -247,12 +232,7 @@ const Index = () => {
       </section>
 
       {/* Vendor Subscription Section */}
-      <section 
-        className="py-16 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/lovable-uploads/4a9d7cad-2ca1-494c-9d15-0e09f0c1074b.png)'
-        }}
-      >
+      <section className="py-16 bg-gradient-to-r from-green-600 to-green-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <div className="flex items-center justify-center mb-6">
@@ -275,12 +255,7 @@ const Index = () => {
       </section>
 
       {/* Vendor Credit Score Section */}
-      <section 
-        className="py-16 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(/lovable-uploads/fcc04cbb-441f-4896-bf2a-cefa6cf518a4.png)'
-        }}
-      >
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>

@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
@@ -92,13 +91,8 @@ const Impact = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section with Impact image */}
-      <section 
-        className="pt-20 pb-16 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/lovable-uploads/7a96e4d7-be7a-41b5-86cf-288f4f4e93e6.png)'
-        }}
-      >
+      {/* Hero Section with gradient background */}
+      <section className="pt-20 pb-16 bg-gradient-to-br from-green-800 via-green-700 to-green-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -114,7 +108,7 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Impact Metrics with real metrics from image */}
+      {/* Impact Metrics */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -229,12 +223,11 @@ const Impact = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <img 
-                src="/lovable-uploads/fcc04cbb-441f-4896-bf2a-cefa6cf518a4.png"
-                alt="Vendor Credit System"
-                className="rounded-lg shadow-xl h-full object-cover"
-              />
+            <div className="bg-gradient-to-br from-gray-700 to-gray-800 h-80 rounded-lg shadow-xl flex items-center justify-center">
+              <div className="text-center text-white">
+                <h3 className="text-2xl font-bold mb-4">Vendor Credit System</h3>
+                <p className="text-lg">Visual representation of credit scoring</p>
+              </div>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-lg">
@@ -279,11 +272,12 @@ const Impact = () => {
             </p>
           </div>
           
-          <img 
-            src="/lovable-uploads/c3f92fdd-4e9d-4dfb-89b5-5b9f01d16994.png"
-            alt="How Hawky Works"
-            className="w-full rounded-xl shadow-lg mb-8"
-          />
+          <div className="bg-gradient-to-br from-blue-100 to-blue-200 h-80 rounded-xl shadow-lg mb-8 flex items-center justify-center">
+            <div className="text-center text-blue-800">
+              <h3 className="text-2xl font-bold mb-4">How Hawky Works</h3>
+              <p className="text-lg">Visual representation of the ecosystem</p>
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="hawky-card">

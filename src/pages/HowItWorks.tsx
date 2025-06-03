@@ -108,14 +108,19 @@ const HowItWorks = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-hawky-orange/10 via-hawky-yellow/10 to-hawky-green/10">
+      {/* Hero Section with How Hawky Works image */}
+      <section 
+        className="pt-20 pb-16 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/lovable-uploads/c3f92fdd-4e9d-4dfb-89b5-5b9f01d16994.png)'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How <span className="bg-gradient-hawky bg-clip-text text-transparent">Hawky</span> Works
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              HOW <span className="text-green-400">HAWKY</span> WORKS
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
               Connecting street vendors, hungry customers, and delivery partners through
               AI-powered technology
             </p>
@@ -123,7 +128,7 @@ const HowItWorks = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="hawky-button">Become a Customer</Button>
               <Button className="hawky-button-secondary">Join as Vendor</Button>
-              <Button variant="outline" className="border-hawky-blue text-hawky-blue hover:bg-hawky-blue hover:text-white">Deliver with Hawky</Button>
+              <Button variant="outline" className="border-hawky-blue text-white hover:bg-hawky-blue hover:text-white">Deliver with Hawky</Button>
             </div>
           </div>
         </div>

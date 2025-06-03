@@ -9,39 +9,31 @@ import {
   Award, 
   Star,
   CheckCircle,
-  Briefcase,
-  GraduationCap
+  MapPin
 } from 'lucide-react';
 
 const Impact = () => {
   const impactMetrics = [
     {
-      title: "Vendors Empowered",
-      value: "2,500+",
+      title: "Total Vendors Empowered",
+      value: "12k",
       description: "Street food vendors onboarded to our platform",
       icon: Users,
       color: "hawky-orange"
     },
     {
-      title: "Income Growth",
-      value: "180%",
+      title: "Street Vendor Income Growth",
+      value: "37%",
       description: "Average income increase for vendors",
       icon: TrendingUp,
       color: "hawky-green"
     },
     {
-      title: "Jobs Created",
-      value: "5,000+",
+      title: "Local Employment Generated",
+      value: "5.2k",
       description: "Direct & indirect jobs in the ecosystem",
-      icon: Briefcase,
+      icon: MapPin,
       color: "hawky-blue"
-    },
-    {
-      title: "Skills Training",
-      value: "18,000+",
-      description: "Hours of business & food safety training",
-      icon: GraduationCap,
-      color: "hawky-yellow"
     }
   ];
 
@@ -100,15 +92,20 @@ const Impact = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-hawky-green/10 via-hawky-blue/10 to-hawky-orange/10">
+      {/* Hero Section with Impact image */}
+      <section 
+        className="pt-20 pb-16 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/lovable-uploads/7a96e4d7-be7a-41b5-86cf-288f4f4e93e6.png)'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Community <span className="bg-gradient-to-r from-hawky-green to-hawky-blue bg-clip-text text-transparent">Impact</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="text-green-400">Impact</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Hawky is more than just a food delivery platform. We're on a mission to empower street food vendors and create sustainable livelihoods.
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+              Improving lives by empowering street vendors
             </p>
             <Button size="lg" className="hawky-button-secondary">
               Support Our Mission
@@ -117,31 +114,22 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Impact Metrics */}
-      <section className="py-16">
+      {/* Impact Metrics with real metrics from image */}
+      <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Impact By Numbers
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Measuring our success by the positive change we create in vendors' lives
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {impactMetrics.map((metric, index) => (
-              <Card key={index} className="hawky-card text-center hover:scale-105 transition-transform">
-                <CardContent className="p-8">
-                  <div className={`bg-${metric.color}/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6`}>
-                    <metric.icon className={`w-8 h-8 text-${metric.color}`} />
-                  </div>
-                  <h3 className={`text-3xl font-bold text-${metric.color} mb-2`}>{metric.value}</h3>
-                  <p className="text-lg font-semibold text-gray-900 mb-2">{metric.title}</p>
-                  <p className="text-gray-600">{metric.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center bg-green-900/40 p-8 rounded-lg">
+              <h2 className="text-5xl font-bold text-white mb-4">12k</h2>
+              <p className="text-xl font-semibold text-green-400 mb-2">Total Vendors Empowered</p>
+            </div>
+            <div className="text-center bg-green-900/40 p-8 rounded-lg">
+              <h2 className="text-5xl font-bold text-white mb-4">37%</h2>
+              <p className="text-xl font-semibold text-green-400 mb-2">Street Vendor Income Growth</p>
+            </div>
+            <div className="text-center bg-green-900/40 p-8 rounded-lg">
+              <h2 className="text-5xl font-bold text-white mb-4">5.2k</h2>
+              <p className="text-xl font-semibold text-green-400 mb-2">Local Employment Generated</p>
+            </div>
           </div>
         </div>
       </section>
@@ -228,99 +216,103 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Impact Stories */}
+      {/* Vendor Boost Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Impact Initiatives
+              Vendor Credit System
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Special programs designed to create lasting social impact
+              Low-cost micro-financing for high-performing vendors
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {impactStories.map((story, index) => (
-              <Card key={index} className="hawky-card overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="flex flex-col md:flex-row h-full">
-                    <div className="md:w-2/5">
-                      <img 
-                        src={`https://images.unsplash.com/${story.image}?w=400&h=500&fit=crop`}
-                        alt={story.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="md:w-3/5 p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">{story.title}</h3>
-                      <p className="text-gray-600 mb-6">{story.description}</p>
-                      <ul className="space-y-2 mb-6">
-                        {story.metrics.map((metric, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <CheckCircle className="w-5 h-5 text-hawky-green mr-2 flex-shrink-0" />
-                            <span>{metric}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Button className="bg-hawky-green hover:bg-hawky-green-dark text-white">
-                        Learn More
-                      </Button>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <img 
+                src="/lovable-uploads/fcc04cbb-441f-4896-bf2a-cefa6cf518a4.png"
+                alt="Vendor Credit System"
+                className="rounded-lg shadow-xl h-full object-cover"
+              />
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">How It Works</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-hawky-green mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">Performance-based scoring</p>
+                    <p className="text-gray-600">Vendors build credit history through consistent app usage and customer reviews.</p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-hawky-green mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">Micro-loans for growth</p>
+                    <p className="text-gray-600">Access to small business loans for inventory, equipment or location expansion.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-hawky-green mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">Financial inclusion</p>
+                    <p className="text-gray-600">First-time banking and formal credit access for traditionally unbanked vendors.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Community Dashboard */}
+      {/* How Hawky Works Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Community Impact Dashboard
+              How Hawky Works
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Real-time updates on the impact we're creating together
+              Our ecosystem connects customers, vendors, and delivery partners
             </p>
           </div>
           
-          <Card className="hawky-card">
-            <CardContent className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-hawky-orange mb-2">₹125 Cr+</div>
-                  <p className="text-gray-900 font-semibold">Total Vendor Earnings</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-hawky-green mb-2">12,000+</div>
-                  <p className="text-gray-900 font-semibold">Financial Inclusion</p>
-                  <p className="text-sm text-gray-500">First bank accounts</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-hawky-blue mb-2">8,500+</div>
-                  <p className="text-gray-900 font-semibold">Digital Literacy</p>
-                  <p className="text-sm text-gray-500">Digital training hours</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-hawky-yellow mb-2">94%</div>
-                  <p className="text-gray-900 font-semibold">Vendor Retention</p>
-                  <p className="text-sm text-gray-500">Annual retention rate</p>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <p className="text-gray-600 italic mb-8">
-                  "Our vision is to create a thriving ecosystem where street food vendors have the tools, technology, and support to build sustainable businesses and provide for their families."
+          <img 
+            src="/lovable-uploads/c3f92fdd-4e9d-4dfb-89b5-5b9f01d16994.png"
+            alt="How Hawky Works"
+            className="w-full rounded-xl shadow-lg mb-8"
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="hawky-card">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Customer</h3>
+                <p className="text-gray-600 mb-4">
+                  Browse street food vendors, place an order for pickup or delivery
                 </p>
-                <Button className="hawky-button-secondary">
-                  View Detailed Impact Report
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+            
+            <Card className="hawky-card">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Vendor</h3>
+                <p className="text-gray-600 mb-4">
+                  Manage your menu and inventory, fulfill customer orders
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="hawky-card">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Delivery Partner</h3>
+                <p className="text-gray-600 mb-4">
+                  Deliver orders to customers quickly and efficiently
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 

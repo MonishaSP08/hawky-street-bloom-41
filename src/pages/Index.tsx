@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -62,17 +61,24 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section with gradient background */}
-      <section className="relative pt-20 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+      {/* Hero Section with street vendor background */}
+      <section className="relative pt-24 pb-16 bg-gradient-to-br from-orange-50 via-yellow-50 to-green-50 overflow-hidden">
+        {/* Background image of street vendor shop */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1555992336-03a23c7b4012?w=1200&h=800&fit=crop')`,
+          }}
+        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               From Street Carts To<br />
-              <span className="text-orange-400">
+              <span className="text-orange-500">
                 Your Cart — Instantly
               </span>
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
               Discover authentic street food from verified local vendors. 
               AI-powered delivery in under 20 minutes with real-time tracking.
             </p>
@@ -97,32 +103,32 @@ const Index = () => {
             {/* Live Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400">2,500+</div>
-                <div className="text-sm text-white/80">Active Vendors</div>
+                <div className="text-3xl font-bold text-orange-500">2,500+</div>
+                <div className="text-sm text-gray-600">Active Vendors</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400">15 mins</div>
-                <div className="text-sm text-white/80">Avg Delivery</div>
+                <div className="text-3xl font-bold text-green-500">15 mins</div>
+                <div className="text-sm text-gray-600">Avg Delivery</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">50,000+</div>
-                <div className="text-sm text-white/80">Happy Customers</div>
+                <div className="text-3xl font-bold text-yellow-500">50,000+</div>
+                <div className="text-sm text-gray-600">Happy Customers</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">3 Cities</div>
-                <div className="text-sm text-white/80">& Growing</div>
+                <div className="text-3xl font-bold text-blue-500">3 Cities</div>
+                <div className="text-sm text-gray-600">& Growing</div>
               </div>
             </div>
           </div>
         </div>
         
         <div className="text-center mt-16">
-          <ArrowDown className="w-6 h-6 text-orange-400 mx-auto animate-bounce" />
+          <ArrowDown className="w-6 h-6 text-orange-500 mx-auto animate-bounce" />
         </div>
       </section>
 
       {/* City Launch Model Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-800 to-gray-900">
+      <section className="py-16 bg-gradient-to-r from-orange-500 to-yellow-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -131,7 +137,7 @@ const Index = () => {
             <p className="text-xl text-white/90 mb-8">
               Hawky launches in select metro cities to start.
             </p>
-            <div className="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg text-xl font-semibold">
+            <div className="inline-block bg-white text-orange-500 px-8 py-4 rounded-lg text-xl font-semibold">
               Bangalore • Hyderabad • Pune
             </div>
           </div>
@@ -184,49 +190,116 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredVendors.map((vendor) => (
-              <Card key={vendor.id} className="vendor-card group cursor-pointer">
-                <CardContent className="p-0">
-                  <div className="relative">
-                    <img 
-                      src={`https://images.unsplash.com/${vendor.image}?w=400&h=200&fit=crop`}
-                      alt={vendor.name}
-                      className="w-full h-48 object-cover rounded-t-xl"
-                    />
-                    <div className="absolute top-4 left-4 flex items-center space-x-2">
-                      {vendor.isOpen ? (
-                        <span className="bg-hawky-green text-white text-xs px-2 py-1 rounded-full">
-                          Open Now
-                        </span>
-                      ) : (
-                        <span className="bg-gray-500 text-white text-xs px-2 py-1 rounded-full">
-                          Closed
-                        </span>
-                      )}
-                      <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
-                        <Clock className="w-3 h-3 inline mr-1" />
-                        {vendor.deliveryTime}
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <Award className="w-6 h-6 text-hawky-yellow" />
-                    </div>
+            {/* Ravi's Chaat Corner with Pani Puri shop image */}
+            <Card className="vendor-card group cursor-pointer">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=400&h=200&fit=crop"
+                    alt="Pani Puri Corner Shop"
+                    className="w-full h-48 object-cover rounded-t-xl"
+                  />
+                  <div className="absolute top-4 left-4 flex items-center space-x-2">
+                    <span className="bg-hawky-green text-white text-xs px-2 py-1 rounded-full">
+                      Open Now
+                    </span>
+                    <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
+                      <Clock className="w-3 h-3 inline mr-1" />
+                      12 mins
+                    </span>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{vendor.name}</h3>
-                    <p className="text-hawky-orange font-semibold mb-2">{vendor.specialty}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-hawky-yellow fill-current" />
-                        <span className="font-semibold">{vendor.rating}</span>
-                        <span className="text-gray-500">• {vendor.cuisine}</span>
-                      </div>
-                      <MapPin className="w-4 h-4 text-hawky-green" />
-                    </div>
+                  <div className="absolute top-4 right-4">
+                    <Award className="w-6 h-6 text-hawky-yellow" />
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Ravi's Chaat Corner</h3>
+                  <p className="text-hawky-orange font-semibold mb-2">Pani Puri</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-hawky-yellow fill-current" />
+                      <span className="font-semibold">4.8</span>
+                      <span className="text-gray-500">• North Indian</span>
+                    </div>
+                    <MapPin className="w-4 h-4 text-hawky-green" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* South Dosa Hub with Dosa shop image */}
+            <Card className="vendor-card group cursor-pointer">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=200&fit=crop"
+                    alt="Crispy Dosa Shop"
+                    className="w-full h-48 object-cover rounded-t-xl"
+                  />
+                  <div className="absolute top-4 left-4 flex items-center space-x-2">
+                    <span className="bg-hawky-green text-white text-xs px-2 py-1 rounded-full">
+                      Open Now
+                    </span>
+                    <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
+                      <Clock className="w-3 h-3 inline mr-1" />
+                      15 mins
+                    </span>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <Award className="w-6 h-6 text-hawky-yellow" />
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">South Dosa Hub</h3>
+                  <p className="text-hawky-orange font-semibold mb-2">Crispy Dosas</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-hawky-yellow fill-current" />
+                      <span className="font-semibold">4.9</span>
+                      <span className="text-gray-500">• South Indian</span>
+                    </div>
+                    <MapPin className="w-4 h-4 text-hawky-green" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Momos Kingdom with Momos shop image */}
+            <Card className="vendor-card group cursor-pointer">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400&h=200&fit=crop"
+                    alt="Steamed Momos Shop"
+                    className="w-full h-48 object-cover rounded-t-xl"
+                  />
+                  <div className="absolute top-4 left-4 flex items-center space-x-2">
+                    <span className="bg-gray-500 text-white text-xs px-2 py-1 rounded-full">
+                      Closed
+                    </span>
+                    <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
+                      <Clock className="w-3 h-3 inline mr-1" />
+                      10 mins
+                    </span>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <Award className="w-6 h-6 text-hawky-yellow" />
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Momos Kingdom</h3>
+                  <p className="text-hawky-orange font-semibold mb-2">Steamed Momos</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-hawky-yellow fill-current" />
+                      <span className="font-semibold">4.7</span>
+                      <span className="text-gray-500">• Tibetan</span>
+                    </div>
+                    <MapPin className="w-4 h-4 text-hawky-green" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

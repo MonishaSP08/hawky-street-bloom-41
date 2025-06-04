@@ -22,13 +22,13 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+        <div className="flex justify-between items-center h-20">
+          {/* Logo - Much Bigger */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/fc706038-1e1f-4243-a8e0-5fa230c47d80.png" 
               alt="Hawky Logo" 
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 

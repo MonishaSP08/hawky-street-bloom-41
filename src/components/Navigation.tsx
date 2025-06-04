@@ -22,26 +22,26 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo - Much Bigger */}
+        <div className="flex justify-between items-center h-24">
+          {/* Logo - Even Bigger */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/fc706038-1e1f-4243-a8e0-5fa230c47d80.png" 
               alt="Hawky Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Bold Font */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`transition-colors duration-200 ${
+                className={`transition-colors duration-200 font-bold text-lg ${
                   isActive(item.path)
-                    ? 'text-hawky-orange font-semibold'
-                    : 'text-gray-700 hover:text-hawky-orange'
+                    ? 'text-hawky-orange font-bold'
+                    : 'text-gray-700 hover:text-hawky-orange font-bold'
                 }`}
               >
                 {item.name}
@@ -51,11 +51,11 @@ const Navigation = () => {
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-hawky-orange text-hawky-orange hover:bg-hawky-orange hover:text-white">
+            <Button variant="outline" className="border-hawky-orange text-hawky-orange hover:bg-hawky-orange hover:text-white font-bold">
               <Phone className="w-4 h-4 mr-2" />
               Support
             </Button>
-            <Button className="hawky-button">
+            <Button className="hawky-button font-bold">
               <User className="w-4 h-4 mr-2" />
               Sign In
             </Button>
@@ -73,7 +73,7 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Bold Font */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100">
@@ -81,10 +81,10 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                  className={`block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'text-hawky-orange bg-orange-50'
-                      : 'text-gray-700 hover:text-hawky-orange hover:bg-gray-50'
+                      ? 'text-hawky-orange bg-orange-50 font-bold'
+                      : 'text-gray-700 hover:text-hawky-orange hover:bg-gray-50 font-bold'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -92,11 +92,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" className="border-hawky-orange text-hawky-orange hover:bg-hawky-orange hover:text-white">
+                <Button variant="outline" className="border-hawky-orange text-hawky-orange hover:bg-hawky-orange hover:text-white font-bold">
                   <Phone className="w-4 h-4 mr-2" />
                   Support
                 </Button>
-                <Button className="hawky-button">
+                <Button className="hawky-button font-bold">
                   <User className="w-4 h-4 mr-2" />
                   Sign In
                 </Button>

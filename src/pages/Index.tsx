@@ -22,7 +22,7 @@ const Index = () => {
       cuisine: "North Indian",
       rating: 4.8,
       deliveryTime: "12 mins",
-      image: "photo-1649972904349-6e44c42644a7",
+      image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=400&h=200&fit=crop",
       specialty: "Pani Puri",
       isOpen: true
     },
@@ -32,7 +32,7 @@ const Index = () => {
       cuisine: "South Indian",
       rating: 4.9,
       deliveryTime: "15 mins",
-      image: "photo-1488590528505-98d2b5aba04b",
+      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=200&fit=crop",
       specialty: "Crispy Dosas",
       isOpen: true
     },
@@ -42,88 +42,192 @@ const Index = () => {
       cuisine: "Tibetan",
       rating: 4.7,
       deliveryTime: "10 mins",
-      image: "photo-1581091226825-a6a2a5aee158",
+      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400&h=200&fit=crop",
       specialty: "Steamed Momos",
       isOpen: false
     }
   ];
 
   const categories = [
-    { name: "Chaat", icon: "🥗", count: "120+ vendors" },
-    { name: "Dosas", icon: "🥞", count: "85+ vendors" },
-    { name: "Momos", icon: "🥟", count: "95+ vendors" },
-    { name: "Juices", icon: "🧃", count: "150+ vendors" },
-    { name: "Breakfast", icon: "🍳", count: "200+ vendors" },
-    { name: "Snacks", icon: "🍿", count: "180+ vendors" }
+    { 
+      name: "Chaat", 
+      icon: "🥗", 
+      count: "120+ vendors",
+      image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=300&h=200&fit=crop"
+    },
+    { 
+      name: "Dosas", 
+      icon: "🥞", 
+      count: "85+ vendors",
+      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&h=200&fit=crop"
+    },
+    { 
+      name: "Momos", 
+      icon: "🥟", 
+      count: "95+ vendors",
+      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=300&h=200&fit=crop"
+    },
+    { 
+      name: "Juices", 
+      icon: "🧃", 
+      count: "150+ vendors",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=200&fit=crop"
+    },
+    { 
+      name: "Breakfast", 
+      icon: "🍳", 
+      count: "200+ vendors",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=300&h=200&fit=crop"
+    },
+    { 
+      name: "Snacks", 
+      icon: "🍿", 
+      count: "180+ vendors",
+      image: "https://images.unsplash.com/photo-1555992336-03a23c7b4012?w=300&h=200&fit=crop"
+    }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section with street vendor background */}
-      <section className="relative pt-24 pb-16 bg-gradient-to-br from-orange-50 via-yellow-50 to-green-50 overflow-hidden">
-        {/* Background image of street vendor shop */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1555992336-03a23c7b4012?w=1200&h=800&fit=crop')`,
-          }}
-        />
+      {/* Hero Section with street vendor background matching the reference image */}
+      <section 
+        className="relative pt-24 pb-16 min-h-screen bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1555992336-03a23c7b4012?w=1200&h=800&fit=crop')`,
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              From Street Carts To<br />
-              <span className="text-orange-500">
-                Your Cart — Instantly
-              </span>
+          <div className="max-w-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              From Street Carts<br />
+              To Your Cart —<br />
+              <span className="text-green-400">Instantly.</span>
             </h1>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              Discover authentic street food from verified local vendors. 
-              AI-powered delivery in under 20 minutes with real-time tracking.
-            </p>
             
             {/* Location search bar */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 max-w-2xl mx-auto">
-              <div className="flex w-full bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="flex items-center px-4 py-3 text-gray-500">
+            <div className="mb-8">
+              <div className="flex bg-white rounded-lg shadow-lg overflow-hidden max-w-lg">
+                <div className="flex items-center px-4 py-4 text-gray-500">
                   <MapPin className="w-5 h-5 text-green-500" />
                 </div>
                 <input 
                   type="text" 
-                  placeholder="Enter your delivery location"
-                  className="flex-1 px-4 py-3 text-gray-900 focus:outline-none"
+                  placeholder="Enter your location"
+                  className="flex-1 px-4 py-4 text-gray-900 focus:outline-none text-lg"
                 />
-                <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg font-semibold rounded-none">
-                  FIND VENDORS
-                </Button>
               </div>
             </div>
 
-            {/* Live Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500">2,500+</div>
-                <div className="text-sm text-gray-600">Active Vendors</div>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
+                Browse
+              </Button>
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4 rounded-lg font-bold">
+                Download App
+              </Button>
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4 rounded-lg font-bold">
+                Become Vendor
+              </Button>
+            </div>
+
+            {/* Map placeholder */}
+            <div className="bg-green-100 rounded-lg p-6 mb-8 relative overflow-hidden max-w-lg">
+              <div className="grid grid-cols-6 grid-rows-4 gap-2 opacity-30">
+                {Array.from({length: 24}).map((_, i) => (
+                  <div key={i} className="bg-green-200 rounded"></div>
+                ))}
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-500">15 mins</div>
-                <div className="text-sm text-gray-600">Avg Delivery</div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-4 h-4 bg-orange-500 rounded-full absolute top-6 left-8"></div>
+                <div className="w-4 h-4 bg-orange-500 rounded-full absolute top-12 left-16"></div>
+                <div className="w-4 h-4 bg-green-500 rounded-full absolute top-8 right-12"></div>
+                <div className="w-4 h-4 bg-red-500 rounded-full absolute bottom-8 left-12"></div>
+                <div className="w-4 h-4 bg-orange-500 rounded-full absolute bottom-6 right-8"></div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-500">50,000+</div>
-                <div className="text-sm text-gray-600">Happy Customers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-500">3 Cities</div>
-                <div className="text-sm text-gray-600">& Growing</div>
+            </div>
+
+            {/* Food Categories with images */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
+              {categories.slice(0, 4).map((category, index) => (
+                <div key={category.name} className="text-center">
+                  <div className="bg-white rounded-lg p-4 mb-2 shadow-lg">
+                    <img 
+                      src={category.image}
+                      alt={category.name}
+                      className="w-full h-20 object-cover rounded-lg"
+                    />
+                  </div>
+                  <p className="text-white font-semibold">{category.name}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Additional categories row */}
+            <div className="mt-8 bg-gray-100 rounded-lg p-6 max-w-4xl">
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
+                {categories.map((category, index) => (
+                  <div key={category.name} className="text-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-2 mx-auto">
+                      <span className="text-2xl">{category.icon}</span>
+                    </div>
+                    <p className="text-gray-700 text-sm font-medium">{category.name}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
-        
-        <div className="text-center mt-16">
-          <ArrowDown className="w-6 h-6 text-orange-500 mx-auto animate-bounce" />
+      </section>
+
+      {/* Vendors Near You Now Section */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-12">Vendors Near You Now</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredVendors.map((vendor) => (
+              <Card key={vendor.id} className="vendor-card group cursor-pointer bg-gray-800 border-gray-700">
+                <CardContent className="p-0">
+                  <div className="relative">
+                    <img 
+                      src={vendor.image}
+                      alt={vendor.specialty}
+                      className="w-full h-48 object-cover rounded-t-xl"
+                    />
+                    <div className="absolute top-4 left-4 flex items-center space-x-2">
+                      <span className={`text-white text-xs px-2 py-1 rounded-full ${
+                        vendor.isOpen ? 'bg-hawky-green' : 'bg-gray-500'
+                      }`}>
+                        {vendor.isOpen ? 'Open Now' : 'Closed'}
+                      </span>
+                      <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
+                        <Clock className="w-3 h-3 inline mr-1" />
+                        {vendor.deliveryTime}
+                      </span>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <Award className="w-6 h-6 text-hawky-yellow" />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-white mb-2">{vendor.name}</h3>
+                    <p className="text-hawky-orange font-semibold mb-2">{vendor.specialty}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-hawky-yellow fill-current" />
+                        <span className="font-semibold text-white">{vendor.rating}</span>
+                        <span className="text-gray-400">• {vendor.cuisine}</span>
+                      </div>
+                      <MapPin className="w-4 h-4 text-hawky-green" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 

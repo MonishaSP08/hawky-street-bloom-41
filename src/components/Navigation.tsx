@@ -22,26 +22,26 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          {/* Logo - Even Bigger */}
+        <div className="flex justify-between items-center h-20">
+          {/* Logo - Bigger but not as big as before */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/fc706038-1e1f-4243-a8e0-5fa230c47d80.png" 
               alt="Hawky Logo" 
-              className="h-20 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 
-          {/* Desktop Navigation - Bold Font */}
+          {/* Desktop Navigation - Bold Font with normal size */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`transition-colors duration-200 font-bold text-lg ${
+                className={`transition-colors duration-200 font-bold ${
                   isActive(item.path)
-                    ? 'text-hawky-orange font-bold'
-                    : 'text-gray-700 hover:text-hawky-orange font-bold'
+                    ? 'text-hawky-orange'
+                    : 'text-gray-700 hover:text-hawky-orange'
                 }`}
               >
                 {item.name}
@@ -83,8 +83,8 @@ const Navigation = () => {
                   to={item.path}
                   className={`block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'text-hawky-orange bg-orange-50 font-bold'
-                      : 'text-gray-700 hover:text-hawky-orange hover:bg-gray-50 font-bold'
+                      ? 'text-hawky-orange bg-orange-50'
+                      : 'text-gray-700 hover:text-hawky-orange hover:bg-gray-50'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

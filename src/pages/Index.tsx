@@ -23,7 +23,7 @@ const Index = () => {
       rating: 4.8,
       deliveryTime: "12 mins",
       image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=400&h=200&fit=crop",
-      specialty: "Pani Puri",
+      specialty: "Pani Puri, Bhel Puri, Aloo Tikki",
       isOpen: true
     },
     {
@@ -33,18 +33,18 @@ const Index = () => {
       rating: 4.9,
       deliveryTime: "15 mins",
       image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=200&fit=crop",
-      specialty: "Crispy Dosas",
+      specialty: "Masala Dosa, Rava Dosa, Uttapam",
       isOpen: true
     },
     {
       id: 3,
-      name: "Momos Kingdom",
-      cuisine: "Tibetan",
-      rating: 4.7,
-      deliveryTime: "10 mins",
-      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400&h=200&fit=crop",
-      specialty: "Steamed Momos",
-      isOpen: false
+      name: "Juice Junction",
+      cuisine: "Beverages",
+      rating: 4.6,
+      deliveryTime: "8 mins",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=200&fit=crop",
+      specialty: "Fresh Orange, Sugarcane, Seasonal Fruits",
+      isOpen: true
     }
   ];
 
@@ -91,15 +91,15 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section with street vendor background matching the reference image */}
+      {/* Hero Section with realistic street vendor background from reference image */}
       <section 
-        className="relative pt-24 pb-16 min-h-screen bg-cover bg-center"
+        className="relative pt-20 pb-16 min-h-screen bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1555992336-03a23c7b4012?w=1200&h=800&fit=crop')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/2ad12d94-29e2-4835-8a21-4150c7e751f3.png')`,
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl pt-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               From Street Carts<br />
               To Your Cart —<br />
@@ -182,72 +182,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Vendors Near You Now Section */}
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12">Vendors Near You Now</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredVendors.map((vendor) => (
-              <Card key={vendor.id} className="vendor-card group cursor-pointer bg-gray-800 border-gray-700">
-                <CardContent className="p-0">
-                  <div className="relative">
-                    <img 
-                      src={vendor.image}
-                      alt={vendor.specialty}
-                      className="w-full h-48 object-cover rounded-t-xl"
-                    />
-                    <div className="absolute top-4 left-4 flex items-center space-x-2">
-                      <span className={`text-white text-xs px-2 py-1 rounded-full ${
-                        vendor.isOpen ? 'bg-hawky-green' : 'bg-gray-500'
-                      }`}>
-                        {vendor.isOpen ? 'Open Now' : 'Closed'}
-                      </span>
-                      <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
-                        <Clock className="w-3 h-3 inline mr-1" />
-                        {vendor.deliveryTime}
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <Award className="w-6 h-6 text-hawky-yellow" />
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">{vendor.name}</h3>
-                    <p className="text-hawky-orange font-semibold mb-2">{vendor.specialty}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-hawky-yellow fill-current" />
-                        <span className="font-semibold text-white">{vendor.rating}</span>
-                        <span className="text-gray-400">• {vendor.cuisine}</span>
-                      </div>
-                      <MapPin className="w-4 h-4 text-hawky-green" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* City Launch Model Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-yellow-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              CITY Launch Model
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Hawky launches in select metro cities to start.
-            </p>
-            <div className="inline-block bg-white text-orange-500 px-8 py-4 rounded-lg text-xl font-semibold">
-              Bangalore • Hyderabad • Pune
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Categories */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,7 +208,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Vendors */}
+      {/* Single Vendors Near You Now Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-12">
@@ -294,116 +228,45 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Ravi's Chaat Corner with Pani Puri shop image */}
-            <Card className="vendor-card group cursor-pointer">
-              <CardContent className="p-0">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=400&h=200&fit=crop"
-                    alt="Pani Puri Corner Shop"
-                    className="w-full h-48 object-cover rounded-t-xl"
-                  />
-                  <div className="absolute top-4 left-4 flex items-center space-x-2">
-                    <span className="bg-hawky-green text-white text-xs px-2 py-1 rounded-full">
-                      Open Now
-                    </span>
-                    <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
-                      <Clock className="w-3 h-3 inline mr-1" />
-                      12 mins
-                    </span>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <Award className="w-6 h-6 text-hawky-yellow" />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Ravi's Chaat Corner</h3>
-                  <p className="text-hawky-orange font-semibold mb-2">Pani Puri</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-hawky-yellow fill-current" />
-                      <span className="font-semibold">4.8</span>
-                      <span className="text-gray-500">• North Indian</span>
+            {featuredVendors.map((vendor) => (
+              <Card key={vendor.id} className="vendor-card group cursor-pointer">
+                <CardContent className="p-0">
+                  <div className="relative">
+                    <img 
+                      src={vendor.image}
+                      alt={vendor.specialty}
+                      className="w-full h-48 object-cover rounded-t-xl"
+                    />
+                    <div className="absolute top-4 left-4 flex items-center space-x-2">
+                      <span className={`text-white text-xs px-2 py-1 rounded-full ${
+                        vendor.isOpen ? 'bg-hawky-green' : 'bg-gray-500'
+                      }`}>
+                        {vendor.isOpen ? 'Open Now' : 'Closed'}
+                      </span>
+                      <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
+                        <Clock className="w-3 h-3 inline mr-1" />
+                        {vendor.deliveryTime}
+                      </span>
                     </div>
-                    <MapPin className="w-4 h-4 text-hawky-green" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* South Dosa Hub with Dosa shop image */}
-            <Card className="vendor-card group cursor-pointer">
-              <CardContent className="p-0">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=200&fit=crop"
-                    alt="Crispy Dosa Shop"
-                    className="w-full h-48 object-cover rounded-t-xl"
-                  />
-                  <div className="absolute top-4 left-4 flex items-center space-x-2">
-                    <span className="bg-hawky-green text-white text-xs px-2 py-1 rounded-full">
-                      Open Now
-                    </span>
-                    <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
-                      <Clock className="w-3 h-3 inline mr-1" />
-                      15 mins
-                    </span>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <Award className="w-6 h-6 text-hawky-yellow" />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">South Dosa Hub</h3>
-                  <p className="text-hawky-orange font-semibold mb-2">Crispy Dosas</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-hawky-yellow fill-current" />
-                      <span className="font-semibold">4.9</span>
-                      <span className="text-gray-500">• South Indian</span>
+                    <div className="absolute top-4 right-4">
+                      <Award className="w-6 h-6 text-hawky-yellow" />
                     </div>
-                    <MapPin className="w-4 h-4 text-hawky-green" />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Momos Kingdom with Momos shop image */}
-            <Card className="vendor-card group cursor-pointer">
-              <CardContent className="p-0">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400&h=200&fit=crop"
-                    alt="Steamed Momos Shop"
-                    className="w-full h-48 object-cover rounded-t-xl"
-                  />
-                  <div className="absolute top-4 left-4 flex items-center space-x-2">
-                    <span className="bg-gray-500 text-white text-xs px-2 py-1 rounded-full">
-                      Closed
-                    </span>
-                    <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
-                      <Clock className="w-3 h-3 inline mr-1" />
-                      10 mins
-                    </span>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <Award className="w-6 h-6 text-hawky-yellow" />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Momos Kingdom</h3>
-                  <p className="text-hawky-orange font-semibold mb-2">Steamed Momos</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-hawky-yellow fill-current" />
-                      <span className="font-semibold">4.7</span>
-                      <span className="text-gray-500">• Tibetan</span>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{vendor.name}</h3>
+                    <p className="text-hawky-orange font-semibold mb-2">{vendor.specialty}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-hawky-yellow fill-current" />
+                        <span className="font-semibold">{vendor.rating}</span>
+                        <span className="text-gray-500">• {vendor.cuisine}</span>
+                      </div>
+                      <MapPin className="w-4 h-4 text-hawky-green" />
                     </div>
-                    <MapPin className="w-4 h-4 text-hawky-green" />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

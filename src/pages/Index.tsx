@@ -22,7 +22,7 @@ const Index = () => {
       cuisine: "North Indian",
       rating: 4.8,
       deliveryTime: "12 mins",
-      image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=400&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=200&fit=crop",
       specialty: "Pani Puri, Bhel Puri, Aloo Tikki",
       isOpen: true
     },
@@ -42,7 +42,7 @@ const Index = () => {
       cuisine: "Beverages",
       rating: 4.6,
       deliveryTime: "8 mins",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=200&fit=crop",
       specialty: "Fresh Orange, Sugarcane, Seasonal Fruits",
       isOpen: true
     }
@@ -91,15 +91,24 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section with realistic street vendor background from reference image */}
+      {/* Hero Section with street vendor background */}
       <section 
-        className="relative pt-20 pb-16 min-h-screen bg-cover bg-center"
+        className="relative pt-16 pb-16 min-h-screen bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/2ad12d94-29e2-4835-8a21-4150c7e751f3.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/a9cb1884-7589-485d-b893-4de13581833e.png')`,
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-2xl pt-16">
+          {/* Hawky Logo */}
+          <div className="flex justify-center mb-12 pt-16">
+            <img 
+              src="/lovable-uploads/88ac5167-8fcd-4e8a-9e98-0009211187af.png" 
+              alt="Hawky Logo" 
+              className="h-32 w-auto"
+            />
+          </div>
+
+          <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               From Street Carts<br />
               To Your Cart —<br />
@@ -108,7 +117,7 @@ const Index = () => {
             
             {/* Location search bar */}
             <div className="mb-8">
-              <div className="flex bg-white rounded-lg shadow-lg overflow-hidden max-w-lg">
+              <div className="flex bg-white rounded-lg shadow-lg overflow-hidden max-w-lg mx-auto">
                 <div className="flex items-center px-4 py-4 text-gray-500">
                   <MapPin className="w-5 h-5 text-green-500" />
                 </div>
@@ -121,7 +130,7 @@ const Index = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
               <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
                 Browse
               </Button>
@@ -134,7 +143,7 @@ const Index = () => {
             </div>
 
             {/* Map placeholder */}
-            <div className="bg-green-100 rounded-lg p-6 mb-8 relative overflow-hidden max-w-lg">
+            <div className="bg-green-100 rounded-lg p-6 mb-8 relative overflow-hidden max-w-lg mx-auto">
               <div className="grid grid-cols-6 grid-rows-4 gap-2 opacity-30">
                 {Array.from({length: 24}).map((_, i) => (
                   <div key={i} className="bg-green-200 rounded"></div>
@@ -146,36 +155,6 @@ const Index = () => {
                 <div className="w-4 h-4 bg-green-500 rounded-full absolute top-8 right-12"></div>
                 <div className="w-4 h-4 bg-red-500 rounded-full absolute bottom-8 left-12"></div>
                 <div className="w-4 h-4 bg-orange-500 rounded-full absolute bottom-6 right-8"></div>
-              </div>
-            </div>
-
-            {/* Food Categories with images */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
-              {categories.slice(0, 4).map((category, index) => (
-                <div key={category.name} className="text-center">
-                  <div className="bg-white rounded-lg p-4 mb-2 shadow-lg">
-                    <img 
-                      src={category.image}
-                      alt={category.name}
-                      className="w-full h-20 object-cover rounded-lg"
-                    />
-                  </div>
-                  <p className="text-white font-semibold">{category.name}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Additional categories row */}
-            <div className="mt-8 bg-gray-100 rounded-lg p-6 max-w-4xl">
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
-                {categories.map((category, index) => (
-                  <div key={category.name} className="text-center">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-2 mx-auto">
-                      <span className="text-2xl">{category.icon}</span>
-                    </div>
-                    <p className="text-gray-700 text-sm font-medium">{category.name}</p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
@@ -208,7 +187,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Single Vendors Near You Now Section */}
+      {/* Vendors Near You Now Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-12">

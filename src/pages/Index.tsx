@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -11,7 +12,8 @@ import {
   ArrowDown, 
   Search,
   Award,
-  Calendar
+  Calendar,
+  Phone
 } from 'lucide-react';
 
 const Index = () => {
@@ -32,7 +34,7 @@ const Index = () => {
       cuisine: "South Indian",
       rating: 4.9,
       deliveryTime: "15 mins",
-      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&h=200&fit=crop",
       specialty: "Masala Dosa, Rava Dosa, Uttapam",
       isOpen: true
     },
@@ -98,14 +100,25 @@ const Index = () => {
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/a9cb1884-7589-485d-b893-4de13581833e.png')`,
         }}
       >
+        {/* Support Button - Top Right */}
+        <div className="absolute top-24 right-8 z-10">
+          <Button className="bg-green-500 hover:bg-green-600 text-white font-bold">
+            <Phone className="w-4 h-4 mr-2" />
+            Support
+          </Button>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Hawky Logo */}
           <div className="flex justify-center mb-12 pt-16">
-            <img 
-              src="/lovable-uploads/88ac5167-8fcd-4e8a-9e98-0009211187af.png" 
-              alt="Hawky Logo" 
-              className="h-32 w-auto"
-            />
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/lovable-uploads/88ac5167-8fcd-4e8a-9e98-0009211187af.png" 
+                alt="Hawky Logo" 
+                className="h-32 w-auto"
+              />
+              <span className="text-6xl font-bold text-white">HAWKY</span>
+            </div>
           </div>
 
           <div className="max-w-2xl mx-auto text-center">
@@ -134,28 +147,12 @@ const Index = () => {
               <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
                 Browse
               </Button>
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4 rounded-lg font-bold">
+              <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
                 Download App
               </Button>
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4 rounded-lg font-bold">
+              <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
                 Become Vendor
               </Button>
-            </div>
-
-            {/* Map placeholder */}
-            <div className="bg-green-100 rounded-lg p-6 mb-8 relative overflow-hidden max-w-lg mx-auto">
-              <div className="grid grid-cols-6 grid-rows-4 gap-2 opacity-30">
-                {Array.from({length: 24}).map((_, i) => (
-                  <div key={i} className="bg-green-200 rounded"></div>
-                ))}
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-4 h-4 bg-orange-500 rounded-full absolute top-6 left-8"></div>
-                <div className="w-4 h-4 bg-orange-500 rounded-full absolute top-12 left-16"></div>
-                <div className="w-4 h-4 bg-green-500 rounded-full absolute top-8 right-12"></div>
-                <div className="w-4 h-4 bg-red-500 rounded-full absolute bottom-8 left-12"></div>
-                <div className="w-4 h-4 bg-orange-500 rounded-full absolute bottom-6 right-8"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -309,10 +306,10 @@ const Index = () => {
             Join thousands of food lovers and vendors already using Hawky
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-hawky-orange hover:bg-gray-100 text-lg px-8 py-4">
+            <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4">
               Download Mobile App
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-hawky-orange text-lg px-8 py-4">
+            <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4">
               Start as Vendor
             </Button>
           </div>

@@ -11,9 +11,9 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/fc706038-1e1f-4243-a8e0-5fa230c47d80.png" 
+                src="/lovable-uploads/88ac5167-8fcd-4e8a-9e98-0009211187af.png" 
                 alt="Hawky Logo" 
-                className="h-12 w-auto brightness-0 invert"
+                className="h-16 w-auto"
               />
             </Link>
             <p className="text-gray-400 text-sm">

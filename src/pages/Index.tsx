@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -100,14 +99,6 @@ const Index = () => {
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/a9cb1884-7589-485d-b893-4de13581833e.png')`,
         }}
       >
-        {/* Support Button - Top Right */}
-        <div className="absolute top-24 right-8 z-10">
-          <Button className="bg-green-500 hover:bg-green-600 text-white font-bold">
-            <Phone className="w-4 h-4 mr-2" />
-            Support
-          </Button>
-        </div>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Hawky Logo */}
           <div className="flex justify-center mb-12 pt-16">

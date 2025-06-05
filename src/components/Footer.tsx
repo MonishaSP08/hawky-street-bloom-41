@@ -15,6 +15,7 @@ const Footer = () => {
                 alt="Hawky Logo" 
                 className="h-16 w-auto"
               />
+              <span className="text-2xl font-bold text-white">HAWKY</span>
             </Link>
             <p className="text-gray-400 text-sm">
               From Street Carts To Your Cart — Instantly. Empowering local vendors with AI-powered hyperlocal delivery.

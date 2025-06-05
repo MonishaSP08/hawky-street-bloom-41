@@ -16,7 +16,8 @@ const Navigation = () => {
     { name: 'How It Works', path: '/how-it-works' },
     { name: 'Vendor Academy', path: '/vendor-academy' },
     { name: 'Impact', path: '/impact' },
-    { name: 'Careers', path: '/careers' }
+    { name: 'Careers', path: '/careers' },
+    { name: 'Support', path: '/support' }
   ];
 
   return (
@@ -42,10 +43,6 @@ const Navigation = () => {
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 font-bold">
-              <Phone className="w-4 h-4 mr-2" />
-              Support
-            </Button>
             <Button className="bg-white text-green-600 hover:bg-green-50 font-bold">
               <User className="w-4 h-4 mr-2" />
               Sign In
@@ -84,10 +81,6 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 font-bold">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Support
-                </Button>
                 <Button className="bg-white text-green-600 hover:bg-green-50 font-bold">
                   <User className="w-4 h-4 mr-2" />
                   Sign In

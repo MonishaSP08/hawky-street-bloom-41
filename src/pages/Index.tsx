@@ -108,7 +108,6 @@ const Index = () => {
                 alt="Hawky Logo" 
                 className="h-32 w-auto"
               />
-              <span className="text-6xl font-bold text-white">HAWKY</span>
             </div>
           </div>
 

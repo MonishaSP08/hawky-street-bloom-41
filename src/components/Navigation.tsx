@@ -44,6 +44,10 @@ const Navigation = () => {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button className="bg-white text-green-600 hover:bg-green-50 font-bold">
+              <Phone className="w-4 h-4 mr-2" />
+              Support
+            </Button>
+            <Button className="bg-white text-green-600 hover:bg-green-50 font-bold">
               <User className="w-4 h-4 mr-2" />
               Sign In
             </Button>
@@ -81,6 +85,10 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4">
+                <Button className="bg-white text-green-600 hover:bg-green-50 font-bold">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Support
+                </Button>
                 <Button className="bg-white text-green-600 hover:bg-green-50 font-bold">
                   <User className="w-4 h-4 mr-2" />
                   Sign In

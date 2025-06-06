@@ -251,11 +251,43 @@ const VendorAcademy = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&h=400&fit=crop"
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
                 alt="Vendor Certification"
                 className="w-full rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40 rounded-xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vendor Credit Score Section */}
+      <section className="py-16 bg-cover bg-center relative" style={{
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=600&fit=crop')`
+      }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Vendor Credit Score System
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Low-cost micro-financing for high-performing vendors
+              </p>
+              <div className="bg-white p-6 rounded-xl shadow-lg border">
+                <p className="text-gray-500 mb-2">VENDOR CREDIT SCORE</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-5xl font-bold text-gray-900">784</span>
+                  <span className="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold">GOOD</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
+                alt="Digital Payment and Credit"
+                className="w-full rounded-xl shadow-lg"
+              />
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -303,7 +304,7 @@ const BeforeAfter = () => {
                 <Button size="lg" className="bg-white text-green-700 hover:bg-green-100">
                   Join as Vendor
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 flex items-center">
+                <Button size="lg" className="bg-white text-green-700 hover:bg-green-100 flex items-center font-semibold">
                   <Download className="mr-2 h-4 w-4" />
                   Download App
                 </Button>

@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
@@ -122,7 +123,9 @@ const HowItWorks = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="hawky-button">Become a Customer</Button>
               <Button className="hawky-button-secondary">Join as Vendor</Button>
-              <Button variant="outline" className="border-hawky-blue text-white hover:bg-hawky-blue hover:text-white">Deliver with Hawky</Button>
+              <Button className="border-white bg-hawky-blue text-white hover:bg-white hover:text-hawky-blue px-6 py-3 rounded-lg font-semibold transition-colors">
+                Deliver with Hawky
+              </Button>
             </div>
           </div>
         </div>
@@ -317,7 +320,7 @@ const HowItWorks = () => {
             <Button size="lg" variant="secondary" className="bg-white text-hawky-orange hover:bg-gray-100 text-lg px-8">
               Download App
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8">
+            <Button size="lg" className="border-white bg-white text-hawky-orange hover:bg-gray-100 text-lg px-8 font-semibold">
               Learn More
             </Button>
           </div>

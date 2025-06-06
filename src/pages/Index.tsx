@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -103,12 +104,12 @@ const Index = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Hawky Logo */}
-          <div className="flex justify-center mb-12 pt-16">
+          <div className="flex justify-center mb-8 pt-16">
             <div className="flex items-center">
               <img 
                 src="/lovable-uploads/b87e42f2-8fc3-4fb5-a78c-c4757a40365d.png" 
                 alt="Hawky Logo" 
-                className="h-32 w-auto"
+                className="h-20 w-auto"
               />
             </div>
           </div>

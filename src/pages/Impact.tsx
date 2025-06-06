@@ -5,10 +5,16 @@ import Footer from '@/components/Footer';
 import { 
   Users, 
   TrendingUp, 
-  Award, 
-  Star,
+  Heart, 
+  MapPin,
+  Award,
+  Clock,
   CheckCircle,
-  MapPin
+  ArrowRight,
+  DollarSign,
+  Utensils,
+  ShoppingBag,
+  Star
 } from 'lucide-react';
 
 const Impact = () => {
@@ -90,8 +96,8 @@ const Impact = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-
-      {/* Hero Section with gradient background */}
+      
+      {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-green-800 via-green-700 to-green-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -108,7 +114,7 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Impact Metrics */}
+      {/* Impact Stats */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -310,22 +316,65 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Partner With Us */}
-      <section className="py-16 bg-gradient-to-r from-hawky-green to-hawky-blue">
+      {/* Partnership CTA */}
+      <section className="py-16 bg-gradient-to-br from-green-600 to-green-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Partner With Us For Greater Impact
+            Partner with Us for Greater Impact
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join us in our mission to empower street vendors and create sustainable livelihoods
+            Join our mission to transform street food culture and support local communities
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-hawky-green hover:bg-gray-100 text-lg px-8 py-4">
-              Corporate Partnerships
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-4">
+            <Button size="lg" className="bg-white text-green-700 hover:bg-green-100 text-lg px-8 font-semibold">
               Contact Impact Team
             </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 text-lg px-8">
+              Learn About Partnerships
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Future Goals */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Future Goals
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our vision for the future includes expanding our reach, improving vendor services, and supporting local communities
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="hawky-card">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expand Reach</h3>
+                <p className="text-gray-600 mb-4">
+                  Increase our presence in new cities and regions to reach more street food vendors
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="hawky-card">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Improve Vendor Services</h3>
+                <p className="text-gray-600 mb-4">
+                  Enhance our vendor management tools and support to improve the overall experience for vendors
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="hawky-card">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Support Local Communities</h3>
+                <p className="text-gray-600 mb-4">
+                  Collaborate with local organizations and initiatives to support the growth and development of street food culture
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

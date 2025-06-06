@@ -11,6 +11,7 @@ import HowItWorks from "./pages/HowItWorks";
 import VendorAcademy from "./pages/VendorAcademy";
 import Impact from "./pages/Impact";
 import Careers from "./pages/Careers";
+import BeforeAfter from "./pages/BeforeAfter";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/vendor-academy" element={<VendorAcademy />} />
           <Route path="/impact" element={<Impact />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/before-after" element={<BeforeAfter />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

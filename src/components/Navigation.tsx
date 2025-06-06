@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -15,6 +16,7 @@ const Navigation = () => {
     { name: 'How It Works', path: '/how-it-works' },
     { name: 'Vendor Academy', path: '/vendor-academy' },
     { name: 'Impact', path: '/impact' },
+    { name: 'Before & After', path: '/before-after' },
     { name: 'Careers', path: '/careers' }
   ];
 

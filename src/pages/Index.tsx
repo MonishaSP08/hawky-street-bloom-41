@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,7 +13,9 @@ import {
   Search,
   Award,
   Calendar,
-  Phone
+  Phone,
+  ArrowRight,
+  BeforeAfter
 } from 'lucide-react';
 
 const Index = () => {
@@ -102,7 +105,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Hawky Logo */}
           <div className="flex justify-center mb-12 pt-16">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center">
               <img 
                 src="/lovable-uploads/88ac5167-8fcd-4e8a-9e98-0009211187af.png" 
                 alt="Hawky Logo" 
@@ -233,6 +236,57 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Before & After Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              See the Impact
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Discover how Hawky transforms the lives of vendors and enhances the customer experience
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex-1 bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl border border-green-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">For Vendors</h3>
+              <p className="mb-4 text-gray-700">
+                From struggling street carts to thriving digital businesses - see how vendors increase their daily earnings by up to 300%.
+              </p>
+              <div className="flex items-center text-green-700 font-semibold">
+                <div className="bg-green-100 p-2 rounded-full mr-2">
+                  <ArrowUp className="w-4 h-4" />
+                </div>
+                <span>50+ plates per day</span>
+              </div>
+            </div>
+            
+            <div className="flex-1 bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">For Customers</h3>
+              <p className="mb-4 text-gray-700">
+                From hunting for food carts to having your favorite street food delivered in minutes - discover the convenience of Hawky.
+              </p>
+              <div className="flex items-center text-blue-700 font-semibold">
+                <div className="bg-blue-100 p-2 rounded-full mr-2">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <span>15-minute delivery</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link to="/before-after">
+              <Button className="bg-green-500 hover:bg-green-600 text-white">
+                View Before & After Stories
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

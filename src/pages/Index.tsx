@@ -15,7 +15,7 @@ import {
   Calendar,
   Phone,
   ArrowRight,
-  BeforeAfter
+  ArrowUpDown  // Using ArrowUpDown instead of BeforeAfter
 } from 'lucide-react';
 
 const Index = () => {
@@ -260,7 +260,7 @@ const Index = () => {
               </p>
               <div className="flex items-center text-green-700 font-semibold">
                 <div className="bg-green-100 p-2 rounded-full mr-2">
-                  <ArrowUp className="w-4 h-4" />
+                  <ArrowUpDown className="w-4 h-4" />
                 </div>
                 <span>50+ plates per day</span>
               </div>

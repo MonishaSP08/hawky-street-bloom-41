@@ -7,7 +7,7 @@ import TestimonialCard from '@/components/TestimonialCard';
 import { Button } from '@/components/ui/button';
 import { 
   ArrowRight, 
-  Chef, 
+  Utensils, // Using Utensils instead of Chef
   Users, 
   ShoppingCart,
   ChevronRight, 
@@ -190,7 +190,7 @@ const BeforeAfter = () => {
             items={vendorComparisonItems}
             gradientFrom="green-600"
             gradientTo="green-800"
-            icon={<Chef className="h-8 w-8 text-green-600" />}
+            icon={<Utensils className="h-8 w-8 text-green-600" />}
           />
 
           {/* Vendor Testimonials */}

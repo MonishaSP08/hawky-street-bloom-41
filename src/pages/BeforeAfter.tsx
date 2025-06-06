@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -20,6 +19,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import BeforeAfterFlowChart from '@/components/BeforeAfterFlowChart';
 
 const BeforeAfter = () => {
   const vendorComparisonItems = [
@@ -177,6 +177,21 @@ const BeforeAfter = () => {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Flow Chart Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              The Hawky Transformation Journey
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See how Hawky transforms the entire street food ecosystem through digital innovation
+            </p>
+          </div>
+          <BeforeAfterFlowChart />
         </div>
       </section>
 

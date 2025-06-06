@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -12,7 +11,8 @@ import {
   CheckCircle,
   TrendingUp,
   Award,
-  Globe
+  Globe,
+  Info
 } from 'lucide-react';
 
 const Careers = () => {
@@ -411,7 +411,8 @@ const Careers = () => {
             <Button size="lg" variant="secondary" className="bg-white text-hawky-orange hover:bg-gray-100 text-lg px-8 py-4">
               View Open Positions
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-4">
+            <Button size="lg" className="bg-green-500 border-white text-white hover:bg-green-600 text-lg px-8 py-4 flex items-center justify-center">
+              <Info className="mr-2 h-5 w-5" />
               Learn About Franchises
             </Button>
           </div>

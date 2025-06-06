@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -36,7 +37,7 @@ const Vendors = () => {
       reviewCount: 1250,
       deliveryTime: "12-15 mins",
       distance: "0.8 km",
-      image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=500&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=500&h=200&fit=crop", // Pani Puri image
       specialties: ["Pani Puri", "Bhel Puri", "Aloo Tikki"],
       isOpen: true,
       isCertified: true,
@@ -52,7 +53,7 @@ const Vendors = () => {
       reviewCount: 890,
       deliveryTime: "15-20 mins",
       distance: "1.2 km",
-      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&h=200&fit=crop", // Dosa image
       specialties: ["Masala Dosa", "Rava Dosa", "Uttapam"],
       isOpen: true,
       isCertified: true,
@@ -68,7 +69,7 @@ const Vendors = () => {
       reviewCount: 650,
       deliveryTime: "10-12 mins",
       distance: "0.5 km",
-      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=500&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=500&h=200&fit=crop", // Momos image
       specialties: ["Steamed Momos", "Fried Momos", "Jhol Momos"],
       isOpen: false,
       isCertified: true,
@@ -84,7 +85,7 @@ const Vendors = () => {
       reviewCount: 420,
       deliveryTime: "8-10 mins",
       distance: "0.3 km",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&h=200&fit=crop", // Fresh juice image
       specialties: ["Fresh Orange", "Sugarcane", "Seasonal Fruits"],
       isOpen: true,
       isCertified: true,
@@ -100,7 +101,7 @@ const Vendors = () => {
       reviewCount: 1100,
       deliveryTime: "18-22 mins",
       distance: "1.8 km",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=500&h=200&fit=crop", // Paratha image
       specialties: ["Aloo Paratha", "Paneer Paratha", "Gobhi Paratha"],
       isOpen: true,
       isCertified: false,
@@ -116,7 +117,7 @@ const Vendors = () => {
       reviewCount: 780,
       deliveryTime: "14-16 mins",
       distance: "1.0 km",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=500&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1545016803-a7e357a737e4?w=500&h=200&fit=crop", // Idli image
       specialties: ["Soft Idli", "Medu Vada", "Coconut Chutney"],
       isOpen: true,
       isCertified: true,
@@ -239,13 +240,13 @@ const Vendors = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredVendors.map((vendor) => (
-                <Card key={vendor.id} className="vendor-card group cursor-pointer">
+                <Card key={vendor.id} className="vendor-card group cursor-pointer hover:shadow-lg transition-shadow">
                   <CardContent className="p-0">
                     <div className="relative">
                       <img 
                         src={vendor.image}
                         alt={vendor.name}
-                        className="w-full h-48 object-cover rounded-t-xl"
+                        className="w-full h-60 object-cover rounded-t-xl"
                       />
                       
                       {/* Status Badges */}

@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -26,7 +25,7 @@ const Index = () => {
       cuisine: "North Indian",
       rating: 4.8,
       deliveryTime: "12 mins",
-      image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=400&h=200&fit=crop", // Pani Puri image
       specialty: "Pani Puri, Bhel Puri, Aloo Tikki",
       isOpen: true
     },
@@ -36,7 +35,7 @@ const Index = () => {
       cuisine: "South Indian",
       rating: 4.9,
       deliveryTime: "15 mins",
-      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=200&fit=crop", // Dosa image
       specialty: "Masala Dosa, Rava Dosa, Uttapam",
       isOpen: true
     },
@@ -46,7 +45,7 @@ const Index = () => {
       cuisine: "Beverages",
       rating: 4.6,
       deliveryTime: "8 mins",
-      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=200&fit=crop", // Juice image
       specialty: "Fresh Orange, Sugarcane, Seasonal Fruits",
       isOpen: true
     }
@@ -107,7 +106,7 @@ const Index = () => {
           <div className="flex justify-center mb-12 pt-16">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/88ac5167-8fcd-4e8a-9e98-0009211187af.png" 
+                src="/lovable-uploads/b87e42f2-8fc3-4fb5-a78c-c4757a40365d.png" 
                 alt="Hawky Logo" 
                 className="h-32 w-auto"
               />

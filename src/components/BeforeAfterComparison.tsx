@@ -80,16 +80,16 @@ const BeforeAfterComparison = ({
             <h3 className="text-xl font-bold mb-4">After Hawky</h3>
             <ul className="space-y-4">
               {items.map((item, index) => (
-                <li key={`after-${index}`} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    {item.afterImage && (
-                      <img 
-                        src={`https://images.unsplash.com/${item.afterImage}?w=60&h=40&fit=crop&crop=center`}
-                        alt="After scenario"
-                        className="w-15 h-10 rounded mb-2 object-cover"
-                      />
-                    )}
+                <li key={`after-${index}`} className="flex flex-col">
+                  {item.afterImage && (
+                    <img 
+                      src={`https://images.unsplash.com/${item.afterImage}?w=240&h=140&fit=crop&crop=center`}
+                      alt="After scenario"
+                      className="w-full h-32 rounded mb-3 object-cover"
+                    />
+                  )}
+                  <div className="flex">
+                    <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0 mt-1" />
                     <span>{item.after}</span>
                   </div>
                 </li>

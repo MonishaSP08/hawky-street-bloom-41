@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Instagram, Facebook, Twitter } from 'lucide-react';
 
@@ -11,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/88ac5167-8fcd-4e8a-9e98-0009211187af.png" 
+                src="/lovable-uploads/b87e42f2-8fc3-4fb5-a78c-c4757a40365d.png" 
                 alt="Hawky Logo" 
                 className="h-16 w-auto"
               />

@@ -25,82 +25,120 @@ const BeforeAfter = () => {
   const vendorComparisonItems = [
     {
       before: 'Street cart limited to nearby pedestrians only',
-      after: 'Orders from entire neighborhood & city through app'
+      after: 'Orders from entire neighborhood & city through app',
+      beforeImage: 'photo-1487958449943-2429e8be8625',
+      afterImage: 'photo-1461749280684-dccba630e2f6'
     },
     {
       before: 'No online visibility',
-      after: 'Profile listed in Hawky app with ratings & photos'
+      after: 'Profile listed in Hawky app with ratings & photos',
+      beforeImage: 'photo-1542744094-3a31f272c490',
+      afterImage: 'photo-1519389950473-47ba0277781c'
     },
     {
       before: 'Cash-only',
-      after: 'Accepts UPI, Paytm, Credit Cards'
+      after: 'Accepts UPI, Paytm, Credit Cards',
+      beforeImage: 'photo-1556742049-0cfed4f6a45d',
+      afterImage: 'photo-1563013544-824ae1b704d3'
     },
     {
       before: 'Unpredictable sales',
-      after: 'Daily consistent orders'
+      after: 'Daily consistent orders',
+      beforeImage: 'photo-1559526324-4b87b5e36e44',
+      afterImage: 'photo-1460925895917-afdab827c52f'
     },
     {
       before: 'No order tracking',
-      after: 'Real-time order dashboard'
+      after: 'Real-time order dashboard',
+      beforeImage: 'photo-1554224155-8d04cb21cd6c',
+      afterImage: 'photo-1551288049-bebda4e38f71'
     },
     {
       before: 'Hygiene not verified',
-      after: 'Hygiene Verified Badge on profile'
+      after: 'Hygiene Verified Badge on profile',
+      beforeImage: 'photo-1571019613454-1cb2f99b2d8b',
+      afterImage: 'photo-1576091160399-112ba8d25d1f'
     },
     {
       before: 'No access to training',
-      after: 'Vendor Academy with free business courses'
+      after: 'Vendor Academy with free business courses',
+      beforeImage: 'photo-1507003211169-0a1dd7228f2d',
+      afterImage: 'photo-1522202176988-66273c2fd55f'
     },
     {
       before: 'No growth insights',
-      after: 'Sales analytics, inventory alerts, peak hours insights'
+      after: 'Sales analytics, inventory alerts, peak hours insights',
+      beforeImage: 'photo-1590736969955-71cc94901144',
+      afterImage: 'photo-1551288049-bebda4e38f71'
     },
     {
       before: 'No financial help',
-      after: 'Eligible for Vendor Credit Score-based micro-financing'
+      after: 'Eligible for Vendor Credit Score-based micro-financing',
+      beforeImage: 'photo-1579621970563-ebec7560ff3e',
+      afterImage: 'photo-1554224155-6726b3ff858f'
     },
     {
       before: 'Completely dependent on weather/footfall',
-      after: 'Orders even during low-footfall hours thanks to delivery'
+      after: 'Orders even during low-footfall hours thanks to delivery',
+      beforeImage: 'photo-1504113888839-1c8eb50233aa',
+      afterImage: 'photo-1487887235947-a955ef187fcc'
     }
   ];
 
   const customerComparisonItems = [
     {
       before: 'Had to visit street carts physically',
-      after: 'Order from home in few clicks'
+      after: 'Order from home in few clicks',
+      beforeImage: 'photo-1506905925346-21bda4d32df4',
+      afterImage: 'photo-1721322800607-8c38375eef04'
     },
     {
       before: 'Limited options at any given location',
-      after: 'Browse 100s of vendors city-wide'
+      after: 'Browse 100s of vendors city-wide',
+      beforeImage: 'photo-1487958449943-2429e8be8625',
+      afterImage: 'photo-1461749280684-dccba630e2f6'
     },
     {
       before: 'No real-time hygiene info',
-      after: 'Hawky Hygiene Verified Badge visible'
+      after: 'Hawky Hygiene Verified Badge visible',
+      beforeImage: 'photo-1571019613454-1cb2f99b2d8b',
+      afterImage: 'photo-1576091160399-112ba8d25d1f'
     },
     {
       before: 'No delivery option',
-      after: '15-20 minute hyperlocal delivery'
+      after: '15-20 minute hyperlocal delivery',
+      beforeImage: 'photo-1506905925346-21bda4d32df4',
+      afterImage: 'photo-1487887235947-a955ef187fcc'
     },
     {
       before: 'No loyalty rewards',
-      after: 'Hawky Coins & referral bonuses'
+      after: 'Hawky Coins & referral bonuses',
+      beforeImage: 'photo-1556742049-0cfed4f6a45d',
+      afterImage: 'photo-1607863680198-23d4b2565df0'
     },
     {
       before: 'No AI-powered recommendations',
-      after: 'Smart AI shows regular favorites and reordering suggestions'
+      after: 'Smart AI shows regular favorites and reordering suggestions',
+      beforeImage: 'photo-1507003211169-0a1dd7228f2d',
+      afterImage: 'photo-1485827404703-89b55fcc595e'
     },
     {
       before: 'Cash only payments',
-      after: 'Fully digital payments with UPI, cards, pay-later options'
+      after: 'Fully digital payments with UPI, cards, pay-later options',
+      beforeImage: 'photo-1556742049-0cfed4f6a45d',
+      afterImage: 'photo-1563013544-824ae1b704d3'
     },
     {
       before: 'Uncertain availability',
-      after: 'Live map shows which vendors are open & nearby'
+      after: 'Live map shows which vendors are open & nearby',
+      beforeImage: 'photo-1590736969955-71cc94901144',
+      afterImage: 'photo-1524661135-423995f22d0b'
     },
     {
       before: 'Vendor discovery by word-of-mouth',
-      after: 'Vendor discovery through ratings, reviews, trending lists'
+      after: 'Vendor discovery through ratings, reviews, trending lists',
+      beforeImage: 'photo-1507003211169-0a1dd7228f2d',
+      afterImage: 'photo-1556761175-b413da4baf72'
     }
   ];
 

@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -97,29 +98,40 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section with street vendor background */}
-      <section 
-        className="relative pt-16 pb-16 min-h-screen bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/a9cb1884-7589-485d-b893-4de13581833e.png')`,
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          {/* Hawky Logo */}
+      <section className="relative pt-16 pb-16 min-h-screen overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="w-full h-full object-cover"
+            poster="/lovable-uploads/a9cb1884-7589-485d-b893-4de13581833e.png"
+          >
+            <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+            {/* Fallback to image if video fails */}
+          </video>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Hawky Logo - Enlarged */}
           <div className="flex justify-center mb-8 pt-16">
             <div className="flex items-center">
               <img 
                 src="/lovable-uploads/b87e42f2-8fc3-4fb5-a78c-c4757a40365d.png" 
                 alt="Hawky Logo" 
-                className="h-16 w-auto"
+                className="h-24 w-auto"
               />
             </div>
           </div>
 
-          <div className="max-w-2xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              From Street Carts<br />
-              To Your Cart —<br />
-              <span className="text-green-400">Instantly.</span>
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Enlarged and Single Line Tagline */}
+            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
+              <span className="whitespace-nowrap">From Street Carts To Your Cart —</span>
+              <br />
+              <span className="text-green-400 whitespace-nowrap">Instantly.</span>
             </h1>
             
             {/* Location search bar */}
@@ -158,8 +170,19 @@ const Index = () => {
       </section>
 
       {/* Categories */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gray-50 relative">
+        {/* Subtle background video */}
+        <div className="absolute inset-0 w-full h-full opacity-20">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="w-full h-full object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/4253687/4253687-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Popular Categories in Bangalore
@@ -235,8 +258,19 @@ const Index = () => {
       </section>
 
       {/* Vendor Subscription Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-green-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden">
+        {/* Background video */}
+        <div className="absolute inset-0 w-full h-full opacity-30">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="w-full h-full object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <div className="flex items-center justify-center mb-6">
               <div className="bg-green-500 p-3 rounded-full mr-4">
@@ -258,8 +292,19 @@ const Index = () => {
       </section>
 
       {/* Vendor Credit Score Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gray-50 relative">
+        {/* Background video */}
+        <div className="absolute inset-0 w-full h-full opacity-20">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="w-full h-full object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -276,16 +321,36 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div>
-              {/* Content space for additional details if needed */}
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
+                alt="Hawky Digital Payment System"
+                className="w-full rounded-xl shadow-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-40 rounded-xl"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h4 className="text-lg font-bold">Digital Payment Integration</h4>
+                <p className="text-sm">Secure transactions for street vendors</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-hawky">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-gradient-hawky relative overflow-hidden">
+        {/* Background video */}
+        <div className="absolute inset-0 w-full h-full opacity-40">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="w-full h-full object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/4253687/4253687-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Street Food Experience in Bangalore?
           </h2>

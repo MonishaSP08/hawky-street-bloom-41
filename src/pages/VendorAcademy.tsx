@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -128,11 +129,19 @@ const VendorAcademy = () => {
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 bg-gradient-to-br from-green-100 via-yellow-100 to-orange-100 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="w-full h-full bg-gradient-to-r from-green-50 to-yellow-50"></div>
+        {/* Background video */}
+        <div className="absolute inset-0 w-full h-full opacity-30">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="w-full h-full object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Unlock Your Street Food Potential
@@ -180,8 +189,19 @@ const VendorAcademy = () => {
       </section>
 
       {/* Modules Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 relative">
+        {/* Subtle background video */}
+        <div className="absolute inset-0 w-full h-full opacity-10">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="w-full h-full object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/4253687/4253687-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Explore Our Training Modules
@@ -221,8 +241,19 @@ const VendorAcademy = () => {
       </section>
 
       {/* Certification Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gray-50 relative">
+        {/* Background video */}
+        <div className="absolute inset-0 w-full h-full opacity-20">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="w-full h-full object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -251,8 +282,8 @@ const VendorAcademy = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
-                alt="Vendor Certification"
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
+                alt="Hawky Vendor Certification"
                 className="w-full rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40 rounded-xl"></div>
@@ -263,7 +294,7 @@ const VendorAcademy = () => {
 
       {/* Vendor Credit Score Section */}
       <section className="py-16 bg-cover bg-center relative" style={{
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=600&fit=crop')`
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop')`
       }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -285,9 +316,14 @@ const VendorAcademy = () => {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
-                alt="Digital Payment and Credit"
+                alt="Hawky Digital Credit System"
                 className="w-full rounded-xl shadow-lg"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-40 rounded-xl"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h4 className="text-lg font-bold">Hawky Credit System</h4>
+                <p className="text-sm">Building financial trust for vendors</p>
+              </div>
             </div>
           </div>
         </div>

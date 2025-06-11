@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import LocationBanner from '@/components/LocationBanner';
 import { 
   MapPin, 
   Clock, 
@@ -92,6 +93,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <LocationBanner />
       <Navigation />
       
       {/* Hero Section with street vendor background */}
@@ -108,7 +110,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/b87e42f2-8fc3-4fb5-a78c-c4757a40365d.png" 
                 alt="Hawky Logo" 
-                className="h-20 w-auto"
+                className="h-16 w-auto"
               />
             </div>
           </div>
@@ -128,16 +130,21 @@ const Index = () => {
                 </div>
                 <input 
                   type="text" 
-                  placeholder="Enter your location"
-                  className="flex-1 px-4 py-4 text-gray-900 focus:outline-none text-lg"
+                  placeholder="Enter your location in Bangalore"
+                  value="Bangalore"
+                  readOnly
+                  className="flex-1 px-4 py-4 text-gray-900 focus:outline-none text-lg bg-gray-50"
                 />
               </div>
+              <p className="text-white/80 text-sm mt-2">
+                Currently serving Bangalore • More cities coming soon!
+              </p>
             </div>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
               <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
-                Browse
+                Browse Bangalore
               </Button>
               <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
                 Download App
@@ -155,10 +162,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Popular Categories
+              Popular Categories in Bangalore
             </h2>
             <p className="text-lg text-gray-600">
-              From traditional chaat to modern fusion - discover your favorites
+              From traditional chaat to modern fusion - discover your favorites across Bangalore
             </p>
           </div>
           
@@ -181,10 +188,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              See the Impact
+              See the Impact in Bangalore
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover how Hawky transforms the lives of vendors and enhances the customer experience
+              Discover how Hawky transforms the lives of vendors and enhances the customer experience across Bangalore
             </p>
           </div>
           
@@ -241,7 +248,7 @@ const Index = () => {
               Vendor Subscription Packs
             </h3>
             <p className="text-xl text-white/90 mb-8">
-              Promote your street cart for extra visibility
+              Promote your street cart for extra visibility across Bangalore
             </p>
             <Button className="bg-green-500 hover:bg-green-600 text-white text-xl px-12 py-4 rounded-lg font-semibold">
               CHOOSE A PLAN
@@ -259,7 +266,7 @@ const Index = () => {
                 Vendor Credit Score System
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Low-cost micro-financing for high-performing vendors
+                Low-cost micro-financing for high-performing vendors in Bangalore
               </p>
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <p className="text-gray-500 mb-2">VENDOR CREDIT SCORE</p>
@@ -280,10 +287,10 @@ const Index = () => {
       <section className="py-16 bg-gradient-hawky">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Street Food Experience?
+            Ready to Transform Your Street Food Experience in Bangalore?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join thousands of food lovers and vendors already using Hawky
+            Join thousands of food lovers and vendors already using Hawky across Bangalore
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4">

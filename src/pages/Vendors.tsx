@@ -1,10 +1,10 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import LocationBanner from '@/components/LocationBanner';
 import { 
   Search, 
   Filter, 
@@ -148,16 +148,17 @@ const Vendors = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <LocationBanner />
       <Navigation />
       
       {/* Header */}
       <section className="pt-20 pb-8 bg-gradient-to-r from-hawky-orange/10 to-hawky-yellow/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Discover Street Vendors
+            Street Vendors in Bangalore
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            Fresh, authentic street food from verified local vendors near you
+            Fresh, authentic street food from verified local vendors across Bangalore
           </p>
           
           {/* Search Bar */}
@@ -165,7 +166,7 @@ const Vendors = () => {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               type="text"
-              placeholder="Search for vendors, cuisines, or dishes..."
+              placeholder="Search for vendors, cuisines, or dishes in Bangalore..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-12 pr-4 py-4 text-lg rounded-full border-2 border-gray-200 focus:border-hawky-orange"
@@ -206,7 +207,7 @@ const Vendors = () => {
 
                 {/* Quick Stats */}
                 <div className="mt-8 pt-6 border-t border-gray-200">
-                  <h4 className="font-semibold text-gray-900 mb-4">Quick Stats</h4>
+                  <h4 className="font-semibold text-gray-900 mb-4">Bangalore Stats</h4>
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span className="text-gray-600">Total Vendors</span>
@@ -230,7 +231,7 @@ const Vendors = () => {
           <div className="lg:w-3/4">
             <div className="flex justify-between items-center mb-6">
               <p className="text-gray-600">
-                Showing {filteredVendors.length} of {vendors.length} vendors
+                Showing {filteredVendors.length} of {vendors.length} vendors in Bangalore
               </p>
               <Button variant="outline" className="border-hawky-orange text-hawky-orange hover:bg-hawky-orange hover:text-white">
                 <MapPin className="w-4 h-4 mr-2" />

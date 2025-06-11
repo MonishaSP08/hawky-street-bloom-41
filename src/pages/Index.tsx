@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -97,31 +96,26 @@ const Index = () => {
       <LocationBanner />
       <Navigation />
       
-      {/* Hero Section with street vendor background */}
+      {/* Hero Section with old street vendor background */}
       <section className="relative pt-16 pb-16 min-h-screen overflow-hidden">
-        {/* Video Background */}
+        {/* Image Background - restored old background */}
         <div className="absolute inset-0 w-full h-full">
-          <video 
-            autoPlay 
-            muted 
-            loop 
+          <img 
+            src="/lovable-uploads/a9cb1884-7589-485d-b893-4de13581833e.png"
+            alt="Street vendors background"
             className="w-full h-full object-cover"
-            poster="/lovable-uploads/a9cb1884-7589-485d-b893-4de13581833e.png"
-          >
-            <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-            {/* Fallback to image if video fails */}
-          </video>
+          />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Hawky Logo - Enlarged */}
+          {/* Hawky Logo - Further Enlarged */}
           <div className="flex justify-center mb-8 pt-16">
             <div className="flex items-center">
               <img 
                 src="/lovable-uploads/b87e42f2-8fc3-4fb5-a78c-c4757a40365d.png" 
                 alt="Hawky Logo" 
-                className="h-24 w-auto"
+                className="h-32 w-auto md:h-40"
               />
             </div>
           </div>

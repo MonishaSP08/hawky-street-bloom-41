@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -170,69 +169,6 @@ const Index = () => {
                   <div className="text-4xl mb-3">{category.icon}</div>
                   <h3 className="font-semibold text-gray-900 mb-1">{category.name}</h3>
                   <p className="text-sm text-gray-500">{category.count}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Vendors Near You Now Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Vendors Near You Now
-              </h2>
-              <p className="text-lg text-gray-600">
-                Fresh, hot food from verified street vendors
-              </p>
-            </div>
-            <Link to="/vendors">
-              <Button variant="outline" className="border-hawky-orange text-hawky-orange hover:bg-hawky-orange hover:text-white">
-                View All Vendors
-              </Button>
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredVendors.map((vendor) => (
-              <Card key={vendor.id} className="vendor-card group cursor-pointer">
-                <CardContent className="p-0">
-                  <div className="relative">
-                    <img 
-                      src={vendor.image}
-                      alt={vendor.specialty}
-                      className="w-full h-48 object-cover rounded-t-xl"
-                    />
-                    <div className="absolute top-4 left-4 flex items-center space-x-2">
-                      <span className={`text-white text-xs px-2 py-1 rounded-full ${
-                        vendor.isOpen ? 'bg-hawky-green' : 'bg-gray-500'
-                      }`}>
-                        {vendor.isOpen ? 'Open Now' : 'Closed'}
-                      </span>
-                      <span className="bg-hawky-orange text-white text-xs px-2 py-1 rounded-full">
-                        <Clock className="w-3 h-3 inline mr-1" />
-                        {vendor.deliveryTime}
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <Award className="w-6 h-6 text-hawky-yellow" />
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{vendor.name}</h3>
-                    <p className="text-hawky-orange font-semibold mb-2">{vendor.specialty}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-hawky-yellow fill-current" />
-                        <span className="font-semibold">{vendor.rating}</span>
-                        <span className="text-gray-500">• {vendor.cuisine}</span>
-                      </div>
-                      <MapPin className="w-4 h-4 text-hawky-green" />
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             ))}

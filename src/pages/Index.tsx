@@ -128,29 +128,25 @@ const Index = () => {
               <span className="text-green-400 whitespace-nowrap">Instantly.</span>
             </h1>
             
-            {/* Location search bar */}
+            {/* Fixed Location - Bangalore Only */}
             <div className="mb-8">
               <div className="flex bg-white rounded-lg shadow-lg overflow-hidden max-w-lg mx-auto">
                 <div className="flex items-center px-4 py-4 text-gray-500">
                   <MapPin className="w-5 h-5 text-green-500" />
                 </div>
-                <input 
-                  type="text" 
-                  placeholder="Enter your location in Bangalore"
-                  value="Bangalore"
-                  readOnly
-                  className="flex-1 px-4 py-4 text-gray-900 focus:outline-none text-lg bg-gray-50"
-                />
+                <div className="flex-1 px-4 py-4 text-gray-900 text-lg bg-gray-50 flex items-center justify-center">
+                  <span className="font-semibold">📍 Bangalore Only</span>
+                </div>
               </div>
               <p className="text-white/80 text-sm mt-2">
-                Currently serving Bangalore • More cities coming soon!
+                Hawky is exclusively available in Bangalore • Other cities coming soon!
               </p>
             </div>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
               <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
-                Browse Bangalore
+                Order in Bangalore
               </Button>
               <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold">
                 Download App
@@ -273,7 +269,7 @@ const Index = () => {
               <h2 className="text-3xl font-bold text-white">HAWKY BOOST</h2>
             </div>
             <h3 className="text-4xl font-bold text-white mb-6">
-              Vendor Subscription Packs
+              Vendor Subscription Packs for Bangalore
             </h3>
             <p className="text-xl text-white/90 mb-8">
               Promote your street cart for extra visibility across Bangalore

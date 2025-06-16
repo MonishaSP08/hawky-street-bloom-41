@@ -12,7 +12,7 @@ const LocationBanner = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-center text-center">
         <MapPin className="w-4 h-4 mr-2" />
         <span className="text-sm font-medium">
-          Currently serving Bangalore only • Expanding to other cities soon!
+          🎯 Hawky is exclusively available in Bangalore • Order now or join as a vendor!
         </span>
         <button 
           onClick={() => setIsVisible(false)}

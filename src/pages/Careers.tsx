@@ -152,73 +152,52 @@ const Careers = () => {
       {/* Why Join Hawky */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Why Join Hawky?
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                At Hawky, you'll work on meaningful problems that impact thousands of street food vendors and millions of customers. Our mission goes beyond food delivery - we're creating sustainable livelihoods and transforming urban food ecosystems.
-              </p>
-              
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="bg-hawky-orange rounded-full p-1 mr-3 mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Impactful Work</h4>
-                    <p className="text-gray-600">Make a real difference in vendors' lives</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-hawky-orange rounded-full p-1 mr-3 mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Growth Opportunities</h4>
-                    <p className="text-gray-600">Rapid advancement in a fast-growing startup</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-hawky-orange rounded-full p-1 mr-3 mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Cutting-Edge Tech</h4>
-                    <p className="text-gray-600">Work with AI, predictive analytics, and real-time systems</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-hawky-orange rounded-full p-1 mr-3 mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Inclusive Culture</h4>
-                    <p className="text-gray-600">Diverse, supportive, and collaborative workplace</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Why Join Hawky?
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+              At Hawky, you'll work on meaningful problems that impact thousands of street food vendors and millions of customers. Our mission goes beyond food delivery - we're creating sustainable livelihoods and transforming urban food ecosystems.
+            </p>
             
-            <div className="grid grid-cols-2 gap-6 p-6 bg-white rounded-xl shadow-lg">
-              <div className="bg-hawky-orange/10 p-6 rounded-xl text-center">
-                <div className="text-4xl font-bold text-hawky-orange mb-2">120+</div>
-                <p className="text-gray-900">Team Members</p>
-              </div>
-              <div className="bg-hawky-green/10 p-6 rounded-xl text-center">
-                <div className="text-4xl font-bold text-hawky-green mb-2">3</div>
-                <p className="text-gray-900">Cities</p>
-              </div>
-              <div className="bg-hawky-blue/10 p-6 rounded-xl text-center">
-                <div className="text-4xl font-bold text-hawky-blue mb-2">40%</div>
-                <p className="text-gray-900">Female Employees</p>
-              </div>
-              <div className="bg-hawky-yellow/10 p-6 rounded-xl text-center">
-                <div className="text-4xl font-bold text-hawky-yellow mb-2">4.8</div>
-                <p className="text-gray-900">Employee Rating</p>
-              </div>
-            </div>
+            <ul className="space-y-4 max-w-2xl mx-auto text-left">
+              <li className="flex items-start">
+                <div className="bg-hawky-orange rounded-full p-1 mr-3 mt-1">
+                  <CheckCircle className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Impactful Work</h4>
+                  <p className="text-gray-600">Make a real difference in vendors' lives</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-hawky-orange rounded-full p-1 mr-3 mt-1">
+                  <CheckCircle className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Growth Opportunities</h4>
+                  <p className="text-gray-600">Rapid advancement in a fast-growing startup</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-hawky-orange rounded-full p-1 mr-3 mt-1">
+                  <CheckCircle className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Cutting-Edge Tech</h4>
+                  <p className="text-gray-600">Work with AI, predictive analytics, and real-time systems</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-hawky-orange rounded-full p-1 mr-3 mt-1">
+                  <CheckCircle className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Inclusive Culture</h4>
+                  <p className="text-gray-600">Diverse, supportive, and collaborative workplace</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

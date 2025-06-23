@@ -97,16 +97,16 @@ const Index = () => {
       <LocationBanner />
       <Navigation />
       
-      {/* Hero Section with old street vendor background */}
+      {/* Hero Section with new street vendor background */}
       <section className="relative pt-16 pb-16 min-h-screen overflow-hidden">
-        {/* Image Background - restored old background */}
+        {/* Image Background - updated with new image */}
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src="/lovable-uploads/a9cb1884-7589-485d-b893-4de13581833e.png"
+            src="/lovable-uploads/be2ceec7-1b93-4c91-ad7f-8223cfbac6f9.png"
             alt="Street vendors background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -212,14 +212,14 @@ const Index = () => {
             <div className="flex-1 bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl border border-green-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">For Vendors</h3>
               <p className="mb-4 text-gray-700">
-                From struggling street carts to thriving digital businesses - see how vendors increase their daily earnings by up to 300%.
+                From struggling street carts to thriving digital businesses - see how vendors increase their earnings significantly.
               </p>
             </div>
             
             <div className="flex-1 bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">For Customers</h3>
               <p className="mb-4 text-gray-700">
-                From hunting for food carts to having your favorite street food delivered in minutes - discover the convenience of Hawky.
+                From hunting for food carts to having your favorite street food delivered quickly - discover the convenience of Hawky.
               </p>
             </div>
           </div>

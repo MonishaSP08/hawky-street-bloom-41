@@ -124,8 +124,8 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             {/* Enlarged and Centered Tagline */}
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight text-center">
-              <span className="block">From Street Carts To Your Cart —</span>
-              <span className="text-green-400 block">Instantly.</span>
+              <span className="block text-center">From Street Carts To Your Cart —</span>
+              <span className="text-green-400 block text-center">Instantly.</span>
             </h1>
             
             {/* Fixed Location - Bangalore Only */}

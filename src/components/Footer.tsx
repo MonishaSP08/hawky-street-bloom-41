@@ -59,13 +59,13 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-hawky-orange" />
-                <span className="text-gray-400 text-sm">+91 98765 43210</span>
+                <span className="text-gray-400 text-sm">+91 8722043143</span>
               </div>
               <div className="flex items-start space-x-2">
                 <div className="w-4 h-4 text-hawky-orange mt-1">📍</div>
                 <span className="text-gray-400 text-sm">
-                  Bangalore, Hyderabad, Pune<br />
-                  Coming to more cities soon!
+                  Bangalore<br />
+                  More cities coming soon!
                 </span>
               </div>
             </div>

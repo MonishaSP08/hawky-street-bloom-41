@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -203,25 +204,6 @@ const Vendors = () => {
                       </div>
                     </button>
                   ))}
-                </div>
-
-                {/* Quick Stats */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <h4 className="font-semibold text-gray-900 mb-4">Bangalore Stats</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Total Vendors</span>
-                      <span className="font-semibold text-hawky-orange">2,500+</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Open Now</span>
-                      <span className="font-semibold text-hawky-green">1,200+</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Avg Delivery</span>
-                      <span className="font-semibold text-hawky-blue">15 mins</span>
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>

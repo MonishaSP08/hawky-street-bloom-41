@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -121,11 +122,10 @@ const Index = () => {
           </div>
 
           <div className="max-w-4xl mx-auto text-center">
-            {/* Enlarged and Single Line Tagline */}
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-              <span className="whitespace-nowrap">From Street Carts To Your Cart —</span>
-              <br />
-              <span className="text-green-400 whitespace-nowrap">Instantly.</span>
+            {/* Enlarged and Centered Tagline */}
+            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight text-center">
+              <span className="block">From Street Carts To Your Cart —</span>
+              <span className="text-green-400 block">Instantly.</span>
             </h1>
             
             {/* Fixed Location - Bangalore Only */}
@@ -214,12 +214,6 @@ const Index = () => {
               <p className="mb-4 text-gray-700">
                 From struggling street carts to thriving digital businesses - see how vendors increase their daily earnings by up to 300%.
               </p>
-              <div className="flex items-center text-green-700 font-semibold">
-                <div className="bg-green-100 p-2 rounded-full mr-2">
-                  <ArrowUpDown className="w-4 h-4" />
-                </div>
-                <span>50+ plates per day</span>
-              </div>
             </div>
             
             <div className="flex-1 bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
@@ -227,12 +221,6 @@ const Index = () => {
               <p className="mb-4 text-gray-700">
                 From hunting for food carts to having your favorite street food delivered in minutes - discover the convenience of Hawky.
               </p>
-              <div className="flex items-center text-blue-700 font-semibold">
-                <div className="bg-blue-100 p-2 rounded-full mr-2">
-                  <Clock className="w-4 h-4" />
-                </div>
-                <span>15-minute delivery</span>
-              </div>
             </div>
           </div>
           

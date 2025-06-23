@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
@@ -39,23 +40,6 @@ const Impact = () => {
       description: "Direct & indirect jobs in the ecosystem",
       icon: MapPin,
       color: "hawky-blue"
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Hawky helped me grow my small pani puri stall into a successful business that now supports my entire family. My income has grown by 300% in just six months.",
-      name: "Ramesh Kumar",
-      role: "Chaat Vendor",
-      location: "Bangalore",
-      image: "photo-1649972904349-6e44c42644a7"
-    },
-    {
-      quote: "Being part of Hawky has completely transformed my business. The hygiene certification and business training has helped me attract more customers and increase my daily earnings.",
-      name: "Lakshmi Devi",
-      role: "Dosa Vendor",
-      location: "Hyderabad",
-      image: "photo-1488590528505-98d2b5aba04b"
     }
   ];
 
@@ -109,78 +93,6 @@ const Impact = () => {
             </p>
             <Button size="lg" className="hawky-button-secondary">
               Support Our Mission
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Impact Stats */}
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center bg-green-900/40 p-8 rounded-lg">
-              <h2 className="text-5xl font-bold text-white mb-4">12k</h2>
-              <p className="text-xl font-semibold text-green-400 mb-2">Total Vendors Empowered</p>
-            </div>
-            <div className="text-center bg-green-900/40 p-8 rounded-lg">
-              <h2 className="text-5xl font-bold text-white mb-4">37%</h2>
-              <p className="text-xl font-semibold text-green-400 mb-2">Street Vendor Income Growth</p>
-            </div>
-            <div className="text-center bg-green-900/40 p-8 rounded-lg">
-              <h2 className="text-5xl font-bold text-white mb-4">5.2k</h2>
-              <p className="text-xl font-semibold text-green-400 mb-2">Local Employment Generated</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vendor Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Vendor Stories
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Real stories from vendors whose lives have been transformed
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hawky-card overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="relative">
-                    <div className="bg-gray-900/80 absolute inset-0 z-10"></div>
-                    <img 
-                      src={`https://images.unsplash.com/${testimonial.image}?w=600&h=300&fit=crop`}
-                      alt={testimonial.name}
-                      className="w-full h-64 object-cover"
-                    />
-                    <div className="absolute inset-0 z-20 flex items-center p-8">
-                      <div className="text-white">
-                        <Star className="w-8 h-8 text-hawky-yellow mb-4" />
-                        <p className="text-xl italic mb-6">"{testimonial.quote}"</p>
-                        <div className="flex items-center">
-                          <div className="mr-4">
-                            <div className="w-12 h-12 rounded-full bg-hawky-orange"></div>
-                          </div>
-                          <div>
-                            <p className="font-bold text-lg">{testimonial.name}</p>
-                            <p className="text-sm opacity-80">{testimonial.role} • {testimonial.location}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Button variant="outline" className="border-hawky-green text-hawky-green hover:bg-hawky-green hover:text-white">
-              View All Stories
             </Button>
           </div>
         </div>

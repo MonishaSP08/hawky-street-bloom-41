@@ -144,54 +144,6 @@ const BeforeAfter = () => {
     }
   ];
 
-  const vendorTestimonials = [
-    {
-      quote: "From 10 plates/day to 50+ plates/day after joining Hawky.",
-      name: "Anil Kumar",
-      role: "Dosa Vendor",
-      location: "Pune",
-      image: "photo-1649972904349-6e44c42644a7"
-    },
-    {
-      quote: "My daily income has tripled, and now I don't worry about bad weather affecting sales.",
-      name: "Lakshmi Devi",
-      role: "Chaat Vendor",
-      location: "Bangalore",
-      image: "photo-1581091226825-a6a2a5aee158"
-    },
-    {
-      quote: "The vendor training has helped me improve my menu and attract more customers.",
-      name: "Raju Singh",
-      role: "Momos Vendor",
-      location: "Hyderabad",
-      image: "photo-1488590528505-98d2b5aba04b"
-    }
-  ];
-
-  const customerTestimonials = [
-    {
-      quote: "I order my favorite pani puri every Friday, and it arrives in 15 mins.",
-      name: "Neha",
-      role: "Customer",
-      location: "Bangalore",
-      image: "photo-1721322800607-8c38375eef04"
-    },
-    {
-      quote: "Now I can order from street vendors across the city without leaving my office.",
-      name: "Vikram",
-      role: "Customer",
-      location: "Pune",
-      image: "photo-1460925895917-afdab827c52f"
-    },
-    {
-      quote: "The hygiene verification gives me confidence to try new vendors.",
-      name: "Priya",
-      role: "Customer",
-      location: "Hyderabad",
-      image: "photo-1498050108023-c5249f4df085"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -247,24 +199,6 @@ const BeforeAfter = () => {
             gradientTo="green-800"
             icon={<Utensils className="h-8 w-8 text-green-600" />}
           />
-
-          {/* Vendor Testimonials */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Vendor Success Stories</h3>
-            <Carousel className="w-full">
-              <CarouselContent>
-                {vendorTestimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <TestimonialCard {...testimonial} />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-end gap-2 mt-4">
-                <CarouselPrevious className="static transform-none h-10 w-10" />
-                <CarouselNext className="static transform-none h-10 w-10" />
-              </div>
-            </Carousel>
-          </div>
           
           {/* Customer Comparison */}
           <BeforeAfterComparison 
@@ -274,24 +208,6 @@ const BeforeAfter = () => {
             gradientTo="blue-700"
             icon={<Users className="h-8 w-8 text-blue-600" />}
           />
-
-          {/* Customer Testimonials */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Customer Success Stories</h3>
-            <Carousel className="w-full">
-              <CarouselContent>
-                {customerTestimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <TestimonialCard {...testimonial} />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-end gap-2 mt-4">
-                <CarouselPrevious className="static transform-none h-10 w-10" />
-                <CarouselNext className="static transform-none h-10 w-10" />
-              </div>
-            </Carousel>
-          </div>
 
           {/* CTA Section */}
           <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-8 md:p-12 text-white">

@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -95,33 +96,6 @@ const Careers = () => {
           type: "Contract",
           description: "Create engaging content for our blog, social media, and vendor training materials."
         }
-      ]
-    }
-  ];
-
-  const franchiseOpportunities = [
-    {
-      title: "City Franchise Partner",
-      description: "Own and operate Hawky in an entire city, building a network of street food vendors and delivery partners.",
-      investment: "₹15-30 Lakhs",
-      returns: "ROI in 18-24 months",
-      requirements: [
-        "Strong local connections in the city",
-        "Experience in food or retail business",
-        "Passion for street food culture",
-        "Operational and financial capabilities"
-      ]
-    },
-    {
-      title: "Neighborhood Micro-Franchise",
-      description: "Manage Hawky operations in a specific neighborhood, with lower investment and focused operations.",
-      investment: "₹5-10 Lakhs",
-      returns: "ROI in 12-18 months",
-      requirements: [
-        "Deep understanding of local neighborhood",
-        "Strong people management skills",
-        "Entrepreneurial mindset",
-        "Ability to work with street vendors"
       ]
     }
   ];
@@ -326,78 +300,6 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Franchise Opportunities */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Franchise & Partnership Opportunities
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Bring Hawky to your city and help transform the local street food ecosystem
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {franchiseOpportunities.map((opportunity, index) => (
-              <Card key={index} className="hawky-card">
-                <CardContent className="p-8">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <Award className="w-8 h-8 text-hawky-orange" />
-                    <h3 className="text-2xl font-bold text-gray-900">{opportunity.title}</h3>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-6">{opportunity.description}</p>
-                  
-                  <div className="flex justify-between mb-6">
-                    <div>
-                      <p className="text-sm text-gray-500">Investment Required</p>
-                      <p className="text-lg font-bold text-hawky-orange">{opportunity.investment}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Expected Returns</p>
-                      <p className="text-lg font-bold text-hawky-green">{opportunity.returns}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <p className="font-semibold text-gray-900 mb-2">Requirements:</p>
-                    <ul className="space-y-2">
-                      {opportunity.requirements.map((req, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <CheckCircle className="w-4 h-4 text-hawky-green mt-1 mr-2 flex-shrink-0" />
-                          <span className="text-gray-600">{req}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Button className="w-full bg-hawky-orange hover:bg-hawky-orange-dark">
-                    Request Information
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          {/* Partner Cities */}
-          <div className="mt-16 text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Priority Expansion Cities</h3>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <span className="bg-hawky-orange/10 text-hawky-orange px-4 py-2 rounded-full">Mumbai</span>
-              <span className="bg-hawky-green/10 text-hawky-green px-4 py-2 rounded-full">Delhi</span>
-              <span className="bg-hawky-blue/10 text-hawky-blue px-4 py-2 rounded-full">Chennai</span>
-              <span className="bg-hawky-yellow/10 text-hawky-yellow px-4 py-2 rounded-full">Kolkata</span>
-              <span className="bg-hawky-orange/10 text-hawky-orange px-4 py-2 rounded-full">Ahmedabad</span>
-              <span className="bg-hawky-green/10 text-hawky-green px-4 py-2 rounded-full">Jaipur</span>
-            </div>
-            <Button variant="outline" className="border-hawky-orange text-hawky-orange hover:bg-hawky-orange hover:text-white">
-              Suggest a City
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-gradient-hawky">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -410,10 +312,6 @@ const Careers = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="bg-white text-hawky-orange hover:bg-gray-100 text-lg px-8 py-4">
               View Open Positions
-            </Button>
-            <Button size="lg" className="bg-green-500 border-white text-white hover:bg-green-600 text-lg px-8 py-4 flex items-center justify-center">
-              <Info className="mr-2 h-5 w-5" />
-              Learn About Franchises
             </Button>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -16,7 +15,11 @@ import {
   Calendar,
   Phone,
   ArrowRight,
-  ArrowUpDown  // Using ArrowUpDown instead of BeforeAfter
+  ArrowUpDown,
+  Utensils,
+  Coffee,
+  Apple,
+  Soup
 } from 'lucide-react';
 
 const Index = () => {
@@ -56,37 +59,37 @@ const Index = () => {
   const categories = [
     { 
       name: "Chaat", 
-      icon: "🥗", 
+      icon: Soup, 
       count: "120+ vendors",
       image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=300&h=200&fit=crop"
     },
     { 
       name: "Dosas", 
-      icon: "🥞", 
+      icon: Utensils, 
       count: "85+ vendors",
       image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&h=200&fit=crop"
     },
     { 
       name: "Momos", 
-      icon: "🥟", 
+      icon: Utensils, 
       count: "95+ vendors",
       image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=300&h=200&fit=crop"
     },
     { 
       name: "Juices", 
-      icon: "🧃", 
+      icon: Apple, 
       count: "150+ vendors",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=200&fit=crop"
     },
     { 
       name: "Breakfast", 
-      icon: "🍳", 
+      icon: Coffee, 
       count: "200+ vendors",
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=300&h=200&fit=crop"
     },
     { 
       name: "Snacks", 
-      icon: "🍿", 
+      icon: Utensils, 
       count: "180+ vendors",
       image: "https://images.unsplash.com/photo-1555992336-03a23c7b4012?w=300&h=200&fit=crop"
     }
@@ -102,7 +105,7 @@ const Index = () => {
         {/* Image Background - updated with new image */}
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src="/lovable-uploads/be2ceec7-1b93-4c91-ad7f-8223cfbac6f9.png"
+            src="/lovable-uploads/f82cfae3-ea5a-47bb-8c93-e3b97bb7de68.png"
             alt="Street vendors background"
             className="w-full h-full object-cover"
           />
@@ -183,15 +186,20 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {categories.map((category, index) => (
-              <Card key={category.name} className="hawky-card text-center p-6 cursor-pointer group hover:scale-105 transition-transform">
-                <CardContent className="p-0">
-                  <div className="text-4xl mb-3">{category.icon}</div>
-                  <h3 className="font-semibold text-gray-900 mb-1">{category.name}</h3>
-                  <p className="text-sm text-gray-500">{category.count}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {categories.map((category, index) => {
+              const IconComponent = category.icon;
+              return (
+                <Card key={category.name} className="hawky-card text-center p-6 cursor-pointer group hover:scale-105 transition-transform">
+                  <CardContent className="p-0">
+                    <div className="mb-3 flex justify-center">
+                      <IconComponent className="w-12 h-12 text-hawky-orange" />
+                    </div>
+                    <h3 className="font-semibold text-gray-900 mb-1">{category.name}</h3>
+                    <p className="text-sm text-gray-500">{category.count}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>

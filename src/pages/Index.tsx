@@ -15,11 +15,7 @@ import {
   Calendar,
   Phone,
   ArrowRight,
-  ArrowUpDown,
-  Utensils,
-  Coffee,
-  Apple,
-  Soup
+  ArrowUpDown
 } from 'lucide-react';
 
 const Index = () => {
@@ -59,37 +55,37 @@ const Index = () => {
   const categories = [
     { 
       name: "Chaat", 
-      icon: Soup, 
+      icon: "🥗", 
       count: "120+ vendors",
       image: "https://images.unsplash.com/photo-1626132647523-66f85bf36e84?w=300&h=200&fit=crop"
     },
     { 
       name: "Dosas", 
-      icon: Utensils, 
+      icon: "🥞", 
       count: "85+ vendors",
       image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&h=200&fit=crop"
     },
     { 
       name: "Momos", 
-      icon: Utensils, 
+      icon: "🥟", 
       count: "95+ vendors",
       image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=300&h=200&fit=crop"
     },
     { 
       name: "Juices", 
-      icon: Apple, 
+      icon: "🧃", 
       count: "150+ vendors",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=200&fit=crop"
     },
     { 
       name: "Breakfast", 
-      icon: Coffee, 
+      icon: "🍳", 
       count: "200+ vendors",
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=300&h=200&fit=crop"
     },
     { 
       name: "Snacks", 
-      icon: Utensils, 
+      icon: "🍿", 
       count: "180+ vendors",
       image: "https://images.unsplash.com/photo-1555992336-03a23c7b4012?w=300&h=200&fit=crop"
     }
@@ -186,20 +182,15 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {categories.map((category, index) => {
-              const IconComponent = category.icon;
-              return (
-                <Card key={category.name} className="hawky-card text-center p-6 cursor-pointer group hover:scale-105 transition-transform">
-                  <CardContent className="p-0">
-                    <div className="mb-3 flex justify-center">
-                      <IconComponent className="w-12 h-12 text-hawky-orange" />
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-1">{category.name}</h3>
-                    <p className="text-sm text-gray-500">{category.count}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {categories.map((category, index) => (
+              <Card key={category.name} className="hawky-card text-center p-6 cursor-pointer group hover:scale-105 transition-transform">
+                <CardContent className="p-0">
+                  <div className="text-4xl mb-3">{category.icon}</div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{category.name}</h3>
+                  <p className="text-sm text-gray-500">{category.count}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

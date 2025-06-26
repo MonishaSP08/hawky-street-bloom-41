@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -98,14 +99,14 @@ const Index = () => {
       
       {/* Hero Section with new street vendor background */}
       <section className="relative pt-16 pb-16 min-h-screen overflow-hidden">
-        {/* Image Background - updated with new image */}
+        {/* Image Background - updated with new uploaded image */}
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src="/lovable-uploads/f82cfae3-ea5a-47bb-8c93-e3b97bb7de68.png"
+            src="/lovable-uploads/74df48f6-b428-4e4b-b3bd-6795ae62c604.png"
             alt="Street vendors background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

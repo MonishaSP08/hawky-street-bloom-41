@@ -113,7 +113,7 @@ const Index = () => {
           <div className="flex justify-center mb-8 pt-16">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/c3ffe2b6-c89e-46ca-a63f-196f7107b815.png" 
+                src="/lovable-uploads/b87e42f2-8fc3-4fb5-a78c-c4757a40365d.png" 
                 alt="Hawky Logo" 
                 className="h-64 w-auto md:h-80 md:w-96 lg:h-96 lg:w-[500px] xl:h-[400px] xl:w-[600px]"
               />

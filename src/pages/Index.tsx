@@ -111,6 +111,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
           <div className="max-w-4xl mx-auto text-center">
+            {/* Small logo before tagline */}
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/lovable-uploads/312004f3-7093-4610-a9a7-ba076893ced7.png" 
+                alt="Hawky Logo" 
+                className="h-16 w-16"
+              />
+            </div>
             {/* Enlarged and Centered Tagline */}
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight text-center">
               <span className="block text-center">From Street Carts To Your Cart —</span>

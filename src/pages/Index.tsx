@@ -109,16 +109,6 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Hawky Logo - Made Much Bigger with Increased Width and Height */}
-          <div className="flex justify-center mb-8 pt-16">
-            <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/b87e42f2-8fc3-4fb5-a78c-c4757a40365d.png" 
-                alt="Hawky Logo" 
-                className="h-64 w-auto md:h-80 md:w-96 lg:h-96 lg:w-[500px] xl:h-[400px] xl:w-[600px]"
-              />
-            </div>
-          </div>
 
           <div className="max-w-4xl mx-auto text-center">
             {/* Enlarged and Centered Tagline */}
